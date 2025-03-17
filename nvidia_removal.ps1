@@ -1,5 +1,21 @@
-# Uninstall NVIDIA Graphics Driver using rundll32.exe
-Start-Process -FilePath "rundll32.exe" -ArgumentList '"C:\Program Files\NVIDIA Corporation\Installer2\installer.0\NVI2.DLL",UninstallPackage Display.Driver' -Wait
+Write-Output "Checking for NVIDIA drivers..."
 
-# Force restart the system
+# Use Get-WmiObject
+$nvidiaDrivers = Get-WmiObject -Query "SELECT * FROM Win32_Product WHERE Name LIKE '%NVIDIA%'"
+
+if ($nvidiaDrivers) {
+    foreach ($driver in $nvidiaDrivers) {
+        Write-Output "Uninstalling NVIDIA driver: $($driver.Name)"
+        $uninstallResult = $driver.Uninstall()
+        if ($uninstallResult.ReturnValue -eq 0) {
+            Write-Output "Successfully uninstalled: $($driver.Name)"
+        } else {
+            Write-Output "Failed to uninstall: $($driver.Name). Error code: $($uninstallResult.ReturnValue)"
+        }
+    }
+} else {
+    Write-Output "No NVIDIA drivers found on this device."
+}
+
+Write-Output "Restarting computer (if necessary)..."
 Restart-Computer -Force
