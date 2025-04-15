@@ -1,0 +1,7 @@
+Create a folder called "fonts" inside the main folder. Place your desired font files into this folder.
+
+Use the Win32 App Tool to package the main folder (which should include the "fonts" folder) into a Win32 app.
+
+Install command: %windir%\sysnative\windowspowershell\v1.0\powershell.exe -ExecutionPolicy Bypass -file "installfonts.ps1"
+Unintall command: %windir%\sysnative\windowspowershell\v1.0\powershell.exe -ExecutionPolicy Bypass -file "uninstallfont.ps1"
+Detection: C:\Windows\Fonts\, file or folder: "your font file"
