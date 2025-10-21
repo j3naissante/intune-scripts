@@ -1,10 +1,10 @@
-$regPath = "HKLM:\SOFTWARE\Microsoft\Cryptography\Wintrust\Config"
+$regPath = "HKLM:\SOFTWARE\Microsoft\Cryptography\Calais"
 $regKeyExists = Test-Path $regPath
 
 if (!$regKeyExists) {
     try {
         Write-Host "Registry path does not exist. Creating key..."
-        New-Item -Path "HKLM:\SOFTWARE\Microsoft\Cryptography\Wintrust" -Name "Config" -Force | Out-Null
+        New-Item -Path "HKLM:\SOFTWARE\Microsoft\Cryptography\Calais" -Name "Config" -Force | Out-Null
         New-ItemProperty -Path $regPath -Name "DisableCapiOverrideForRSA" -Value 0 -PropertyType DWord -Force | Out-Null
         Write-Host "Registry key and value created successfully."
         Exit 0
@@ -37,3 +37,4 @@ else {
         Exit 0
     }
 }
+
