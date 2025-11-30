@@ -1,0 +1,7 @@
+One of the ways to add RIKS Software to Company Portal.
+
+Create a new folder, add Install.ps1, include the complete RIKS directory, and then package everything into an intunewin file
+
+
+Install command: powershell.exe -ExecutionPolicy Bypass -File Install.ps1
+
