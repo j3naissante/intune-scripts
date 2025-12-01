@@ -20,7 +20,7 @@ If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 
 # Source & Destination
 $SourceFolder = "$PSScriptRoot\RIKS"
-$DestinationFolder = Join-Path -Path "$Env:ProgramFiles(x86)" -ChildPath "RIKS"
+$DestinationFolder = Join-Path -Path ${Env:ProgramFiles(x86)} -ChildPath "RIKS"
 
 If (-Not (Test-Path $DestinationFolder)) {
     Write-Log "Destination folder does not exist. Creating $DestinationFolder"
