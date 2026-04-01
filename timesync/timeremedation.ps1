@@ -1,26 +1,31 @@
-Write-Output "Starting Windows Time remediation"
+﻿$LogPath = "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\TimeSyncRestart.log"
 
-# Ensure service exists
-$service = Get-Service -Name w32time -ErrorAction SilentlyContinue
-if ($null -eq $service) {
-    Write-Output "Windows Time service not found"
-    exit 1
+function Write-Log {
+    param([string]$Message)
+    $Stamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    "$Stamp - $Message" | Out-File -FilePath $LogPath -Append
 }
 
-# Restart service
-if ($service.Status -ne 'Running') {
-    Start-Service w32time
-} else {
-    Restart-Service w32time -Force
+Write-Log "Starting Time Sync fix"
+
+try {
+    
+    Set-Service -Name W32Time -StartupType Automatic -ErrorAction Stop
+    
+    
+    Restart-Service -Name W32Time -Force -ErrorAction Stop
+    Start-Sleep -Seconds 5 
+
+    
+    $SyncResult = w32tm /resync /force
+    Write-Log "Sync result: $SyncResult"
+    
+    Write-Output "Success: Service restarted and synced."
+    exit 0 
 }
-
-# Force time sync
-w32tm /resync /force
-
-if ($LASTEXITCODE -eq 0) {
-    Write-Output "Time synchronization successful"
-    exit 0
-} else {
-    Write-Output "Time synchronization failed"
-    exit 1
+catch {
+    $ErrorMsg = $_.Exception.Message
+    Write-Log "Fail: $ErrorMsg"
+    Write-Error "Failed: $ErrorMsg"
+    exit 1 
 }
