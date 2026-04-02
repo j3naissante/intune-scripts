@@ -20,7 +20,7 @@ If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 
 # Source & Destination
 $SourceFolder = "$PSScriptRoot\RIKS"
-$DestinationFolder = Join-Path -Path ${Env:ProgramFiles(x86)} -ChildPath "RIKS"
+$DestinationFolder = Join-Path -Path ([System.Environment]::GetFolderPath('ProgramFilesX86')) -ChildPath "RIKS"
 
 If (-Not (Test-Path $DestinationFolder)) {
     Write-Log "Destination folder does not exist. Creating $DestinationFolder"
@@ -31,7 +31,6 @@ Try {
     Write-Log "Copying contents of $SourceFolder to $DestinationFolder"
     Copy-Item -Path "$SourceFolder\*" -Destination $DestinationFolder -Recurse -Force
     Write-Log "Folder successfully copied."
-    Exit 0
 } Catch {
     Write-Log "ERROR: Failed to copy folder. Exception: $_"
     Exit 1
@@ -47,3 +46,5 @@ if (Test-Path $Exe1) {
 if (Test-Path $Exe2) {
     New-Shortcut -TargetPath $Exe2 -ShortcutName "RIKS - Lugejahaldus" -Desktop -StartMenu
 }
+
+Exit 0
