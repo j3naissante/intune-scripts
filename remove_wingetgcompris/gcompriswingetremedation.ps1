@@ -1,19 +1,10 @@
-# ==============================
-# Intune Remediation - GCompris
-# ==============================
 
 $appPattern = "*GCompris*"
 
 Write-Output "Starting uninstall for GCompris..."
 
-# -----------------------------
-# 1. Kill running process (if any)
-# -----------------------------
 Get-Process *gcompris* -ErrorAction SilentlyContinue | Stop-Process -Force
 
-# -----------------------------
-# 2. Remove installed AppX packages
-# -----------------------------
 $appx = Get-AppxPackage -AllUsers $appPattern -ErrorAction SilentlyContinue
 
 if ($appx) {
@@ -23,9 +14,6 @@ if ($appx) {
     }
 }
 
-# -----------------------------
-# 3. Remove provisioned package (prevents reinstall)
-# -----------------------------
 $prov = Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue |
         Where-Object DisplayName -like $appPattern
 
@@ -36,9 +24,6 @@ if ($prov) {
     }
 }
 
-# -----------------------------
-# 4. Verify removal
-# -----------------------------
 $remaining = Get-AppxPackage -AllUsers $appPattern
 
 if ($remaining) {
