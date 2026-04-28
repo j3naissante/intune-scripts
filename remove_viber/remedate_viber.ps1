@@ -5,7 +5,7 @@
 # Exit 0 = Remediation succeeded
 # Exit 1 = Remediation failed (Intune will retry on next check-in)
 #
-# OneDrive - Tallinna Koolid KFM:
+# OneDrive
 #   Desktop   → redirected to OneDrive (Töölaud)
 #   Start Menu → stays in AppData\Roaming (not redirected)
 # ─────────────────────────────────────────────────────────────
@@ -65,7 +65,7 @@ if ($procs) {
 foreach ($profile in $userProfiles) {
     $localAppData   = Join-Path $profile.FullName "AppData\Local"
     $roamingAppData = Join-Path $profile.FullName "AppData\Roaming"
-    $oneDrivePath   = Join-Path $profile.FullName "OneDrive - Tallinna Koolid"
+    $oneDrivePath   = Join-Path $profile.FullName "OneDrive - "
 
     $targets = [System.Collections.Generic.List[string]]@(
         # Core install folders
