@@ -11,3 +11,17 @@ if (Test-Path $discordPath) {
 } else {
     Write-Output "Discord not found"
 }
+
+$StartMenuPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs"
+
+Get-ChildItem -Path $StartMenuPath -Recurse -Filter "*Discord*.lnk" -ErrorAction SilentlyContinue |
+    ForEach-Object {
+        Write-Output "Removing shortcut: $($_.FullName)"
+        Remove-Item -Path $_.FullName -Force -ErrorAction SilentlyContinue
+    }
+$desktopPath = [System.Environment]::GetFolderPath("Desktop")
+Get-ChildItem -Path $desktopPath -Recurse -Filter "*Discord*.lnk" -ErrorAction SilentlyContinue |
+    ForEach-Object {
+        Write-Output "Removing desktop shortcut: $($_.FullName)"
+        Remove-Item -Path $_.FullName -Force -ErrorAction SilentlyContinue
+    }

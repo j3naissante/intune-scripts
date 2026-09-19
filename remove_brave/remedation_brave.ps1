@@ -1,28 +1,30 @@
-Write-Host "Removing Brave Browser"
+$bravePath = "$env:LOCALAPPDATA\BraveSoftware\Brave-Browser\Application\brave.exe"
 
-Get-Process "brave" -ErrorAction -SilentlyContinue | Stop-Process -Force -ErrorAction -SilentlyContinue
+if (Test-Path $bravePath) {
+    Write-Output "Uninstalling Brave"
 
-$profiles = Get-ChildItem "C:\Users" -Directory -SilentlyContinue
-
-foreach ($profile in $profiles) {
-    $braveRoot "C:\Users\$($profile.Name)\AppData\Local\BraveSoftware"
-
-    if (Test-Path $braveRoot) {
-        Write-Host "Removing brave from profile $($profile.Name)"
-
-        Remove-Item -Path $braveRoot -Recurse -Force -ErrorAction -SilentlyContinue
+    try {
+        Start-Process "cmd.exe" -ArgumentList "/c `"$bravePath --uninstall --silent --forceuninstall --system-level=false`"" -Wait -NoNewWindow
+        Write-Output "Brave uninstalled successfully."
     }
-
-    $shortcutPath = "C:\Users\$($profile.Name)\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Brave.Ink"
-    if (Test-Path $shortcutPath) {
-        Remove-Item $shortcutPath -Force -ErrorAction -SilentlyContinue
-    }
-
-    $desktopShortcut = "C:\Users\$($profile.Name)\Desktop\Brave.Ink"
-    if (Test-Path $desktopShortcut) {
-        Remove-Item $desktopShortcut -Force -ErrorAction -SilentlyContinue
+    catch {
+        Write-Error "Failed to uninstall Brave: $_"
     }
 }
+else {
+    Write-Output "Brave not found"
+}
 
-Write-Host "Brave removed"
-exit 0
+$StartMenuPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs"
+
+Get-ChildItem -Path $StartMenuPath -Recurse -Filter "*Brave*.lnk" -ErrorAction SilentlyContinue |
+    ForEach-Object {
+        Write-Output "Removing shortcut: $($_.FullName)"
+        Remove-Item -Path $_.FullName -Force -ErrorAction SilentlyContinue
+    }
+$desktopPath = [System.Environment]::GetFolderPath("Desktop")
+Get-ChildItem -Path $desktopPath -Recurse -Filter "*Brave*.lnk" -ErrorAction SilentlyContinue |
+    ForEach-Object {
+        Write-Output "Removing desktop shortcut: $($_.FullName)"
+        Remove-Item -Path $_.FullName -Force -ErrorAction SilentlyContinue
+    }

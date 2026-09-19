@@ -1,16 +1,28 @@
-$RobloxPath = "$env:LOCALAPPDATA\Roblox"
+$RobloxPath = "$env:LOCALAPPDATA\Roblox\Versions\version-*\RobloxPlayerBeta.exe"
 
 if (Test-Path $RobloxPath) {
+    Write-Output "Uninstalling Roblox"
+
     try {
-        Remove-Item -Path $RobloxPath -Recurse -Force
-        Write-Output "Roblox installation removed successfully."
-        exit 0  
-    }
-    catch {
-        Write-Output "Failed to remove Roblox: $_"
-        exit 1 
+        Start-Process "cmd.exe" -ArgumentList "/c `"$RobloxPath --uninstall -s`"" -Wait -NoNewWindow
+        Write-Output "Roblox uninstalled successfully."
+    } catch {
+        Write-Error "Failed to uninstall Roblox: $_"
     }
 } else {
-    Write-Output "Roblox is not installed, nothing to remove."
-    exit 0
+    Write-Output "Roblox not found"
 }
+
+$StartMenuPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs"
+
+Get-ChildItem -Path $StartMenuPath -Recurse -Filter "*Roblox*.lnk" -ErrorAction SilentlyContinue |
+    ForEach-Object {
+        Write-Output "Removing shortcut: $($_.FullName)"
+        Remove-Item -Path $_.FullName -Force -ErrorAction SilentlyContinue
+    }
+$desktopPath = [System.Environment]::GetFolderPath("Desktop")
+Get-ChildItem -Path $desktopPath -Recurse -Filter "*Roblox*.lnk" -ErrorAction SilentlyContinue |
+    ForEach-Object {
+        Write-Output "Removing desktop shortcut: $($_.FullName)"
+        Remove-Item -Path $_.FullName -Force -ErrorAction SilentlyContinue
+    }

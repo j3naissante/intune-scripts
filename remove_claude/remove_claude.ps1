@@ -22,3 +22,9 @@ Get-ChildItem -Path $StartMenuPath -Recurse -Filter "*Claude*.lnk" -ErrorAction 
         Write-Output "Removing shortcut: $($_.FullName)"
         Remove-Item -Path $_.FullName -Force -ErrorAction SilentlyContinue
     }
+$desktopPath = [System.Environment]::GetFolderPath("Desktop")
+Get-ChildItem -Path $desktopPath -Recurse -Filter "*Claude*.lnk" -ErrorAction SilentlyContinue |
+    ForEach-Object {
+        Write-Output "Removing desktop shortcut: $($_.FullName)"
+        Remove-Item -Path $_.FullName -Force -ErrorAction SilentlyContinue
+    }

@@ -1,17 +1,10 @@
-$found = $false
+$bravePath = "$env:LOCALAPPDATA\BraveSoftware\Brave-Browser\Application\brave.exe"
 
-$profile = Get-ChildItem "C:\Users" -Directory -ErrorAction -SilentlyContinue
-
-foreach ($profile in $profiles) {
-    $bravePath "C:\Users\$($profile.Name)\AppData\Local\BraveSoftware\Application\brave.exe"
-
-    if (test-Path $bravePath){
-        Write-Output "Brave Browser found for user: $($profile.Name)"
-    }
-}
-
-if ($found) {
+if (Test-Path $bravePath) {
+    Write-Output "Brave Browser found at $bravePath"
     exit 1
-} else {
-    exit 0 
+}
+else {
+    Write-Output "Brave Browser not found"
+    exit 0
 }

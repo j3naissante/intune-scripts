@@ -1,11 +1,4 @@
 ﻿# Detect-Viber.ps1
-# Intune Proactive Remediation — DETECTION script
-# Run as: SYSTEM
-# 64-bit PowerShell: Yes
-#
-# Exit 0 = Compliant   (Viber not found)
-# Exit 1 = Non-compliant (Viber found — triggers remediation)
-# ─────────────────────────────────────────────────────────────
 
 $ErrorActionPreference = "SilentlyContinue"
 
