@@ -1,16 +1,9 @@
-$log = "$env:TEMP\dism_check.log"
+$marker = "C:\ProgramData\Remediation\dism_done.txt"
 
-$check = Start-Process -FilePath "dism.exe" `
-    -ArgumentList "/Online /Cleanup-Image /CheckHealth" `
-    -NoNewWindow -Wait -PassThru -RedirectStandardOutput $log
-
-$content = Get-Content $log -ErrorAction SilentlyContinue
-
-if ($content -match "No component store corruption detected") {
-    Write-Output "Healthy"
+if (Test-Path $marker) {
+    Write-Output "DISM RestoreHealth already completed."
     exit 0
 }
-else {
-    Write-Output "Corruption detected or unknown state"
-    exit 1
-}
+
+Write-Output "DISM RestoreHealth not yet run."
+exit 1

@@ -1,0 +1,3229 @@
+;******************************************************************************
+;**                                                                          **
+;**  Copyright 2009-2025 Intel Corporation. All Rights Reserved.             **
+;**                                                                          **
+;**  The material contained or described herein and all documents related    **
+;**  to such material ("Material") is owned by Intel Corporation or its      **
+;**  suppliers or licensors, and title to such Material remains with Intel   **
+;**  Corporation or its suppliers or licensors. The Material contains        **
+;**  proprietary information of Intel or its suppliers and licensors. The    **
+;**  Material is protected by worldwide copyright laws and treaty            **
+;**  provisions. No part of the Material may be used, copied, reproduced,    **
+;**  modified, published, uploaded, posted, transmitted, distributed or      **
+;**  disclosed in any way without Intel's prior express written permission.  **
+;**  No license under any patent, copyright or other intellectual property   **
+;**  rights in the Material is granted to or conferred upon you, either      **
+;**  expressly, by implication, inducement, estoppel or otherwise. Any       **
+;**  license under such intellectual property rights must be express and     **
+;**  approved by Intel in writing.                                           **
+;**                                                                          **
+;**  Unless otherwise agreed by Intel in writing, you may not remove or      **
+;**  alter this notice or any other notice embedded in Materials by Intel    **
+;**  or Intel's suppliers or licensors in any way.                           **
+;******************************************************************************
+;
+;******************************************************************************
+
+; e1d.INF (Windows 10/11 / Server 2019/2022 64 bit)
+
+;
+; Intel(R) Gigabit Network connections
+;******************************************************************************
+;
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = Net
+ClassGUID   = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider    = %Intel%
+CatalogFile = e1d.cat
+PnpLockdown = 1
+DriverVer = 10/29/2025,12.19.2.66
+
+[Manufacturer]
+%Intel%     = Intel, NTamd64.10.0...17763, NTamd64.10.0.1..17763,  NTamd64.10.0...18362, NTamd64.10.0.1..18362
+
+[ControlFlags]
+ExcludeFromSelect = \ 
+    PCI\VEN_8086&DEV_153A,\ 
+    PCI\VEN_8086&DEV_153B
+
+[Intel.NTamd64.10.0.1..17763]
+; DisplayName                   Section                          DeviceID
+; -----------                   -------                          --------
+%E153ANC.DeviceDesc%            = I217.10.0.1,          PCI\VEN_8086&DEV_153A
+%E153ANC.DeviceDesc%            = I217.10.0.1,          PCI\VEN_8086&DEV_153A&SUBSYS_00008086
+%E153BNC.DeviceDesc%            = I217.10.0.1,          PCI\VEN_8086&DEV_153B
+%E153BNC.DeviceDesc%            = I217.10.0.1,          PCI\VEN_8086&DEV_153B&SUBSYS_00008086
+%E155ANC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_155A
+%E155ANC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_155A&SUBSYS_00008086
+%E1559NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_1559
+%E1559NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_1559&SUBSYS_00008086
+%E15A0NC.DeviceDesc%            = I217.10.0.1,          PCI\VEN_8086&DEV_15A0
+%E15A0NC.DeviceDesc%            = I217.10.0.1,          PCI\VEN_8086&DEV_15A0&SUBSYS_00008086
+%E15A1NC.DeviceDesc%            = I217.10.0.1,          PCI\VEN_8086&DEV_15A1
+%E15A1NC.DeviceDesc%            = I217.10.0.1,          PCI\VEN_8086&DEV_15A1&SUBSYS_00008086
+%E15A2NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15A2
+%E15A2NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15A2&SUBSYS_00008086
+%E15A3NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15A3
+%E15A3NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15A3&SUBSYS_00008086
+%E156FNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_156F
+%E156FNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_156F&SUBSYS_00008086
+%E1570NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_1570
+%E1570NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_1570&SUBSYS_00008086
+%E15B7NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15B7
+%E15B7NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15B7&SUBSYS_00008086
+%E15B8NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15B8
+%E15B8NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15B8&SUBSYS_00008086
+%E15B9NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15B9
+%E15B9NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15B9&SUBSYS_00008086
+%E15D7NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15D7
+%E15D7NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15D7&SUBSYS_00008086
+%E15D8NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15D8
+%E15D8NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15D8&SUBSYS_00008086
+%E15E3NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15E3
+%E15E3NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15E3&SUBSYS_00008086
+%E15D6NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15D6
+%E15D6NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15D6&SUBSYS_00008086
+%E15BBNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15BB
+%E15BBNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15BB&SUBSYS_00008086
+%E15BCNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15BC
+%E15BCNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15BC&SUBSYS_00008086
+%E15BDNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15BD
+%E15BDNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15BD&SUBSYS_00008086
+%E15BENC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15BE
+%E15BENC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15BE&SUBSYS_00008086
+%E15DFNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15DF
+%E15DFNC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15DF&SUBSYS_00008086
+%E15E0NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15E0
+%E15E0NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15E0&SUBSYS_00008086
+%E15E1NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15E1
+%E15E1NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15E1&SUBSYS_00008086
+%E15E2NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15E2
+%E15E2NC.DeviceDesc%            = I219.10.0.1,          PCI\VEN_8086&DEV_15E2&SUBSYS_00008086
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4E
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_00008086
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4F
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_00008086
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_00008086
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_00008086
+%E0D53NC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D53
+%E0D53NC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D53&SUBSYS_00008086
+%E0D55NC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D55
+%E0D55NC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D55&SUBSYS_00008086
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_00008086
+%E15FANC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FA
+%E15FANC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FA&SUBSYS_00008086
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB&SUBSYS_00008086
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FC
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FC&SUBSYS_00008086
+%E15F4NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F4
+%E15F4NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F4&SUBSYS_00008086
+%E1A1ENC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1E
+%E1A1ENC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1E&SUBSYS_00008086
+%E1A1FNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1F
+%E1A1FNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1F&SUBSYS_00008086
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_00008086
+%E1A1DNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1D
+%E1A1DNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1D&SUBSYS_00008086
+%E550ANC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_550A
+%E550ANC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_550A&SUBSYS_00008086
+%E550BNC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_550B
+%E550BNC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_550B&SUBSYS_00008086
+%E550CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_550C
+%E550CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_550C&SUBSYS_00008086
+%E550DNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_550D
+%E550DNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_550D&SUBSYS_00008086
+%E0DC5NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_0DC5
+%E0DC5NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_0DC5&SUBSYS_00008086
+%E0DC6NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_0DC6
+%E0DC6NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_0DC6&SUBSYS_00008086
+%E0DC7NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_0DC7
+%E0DC7NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_0DC7&SUBSYS_00008086
+%E0DC8NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_0DC8
+%E0DC8NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_0DC8&SUBSYS_00008086
+%E57A0NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57A0
+%E57A0NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57A0&SUBSYS_00008086
+%E57A1NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57A1
+%E57A1NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57A1&SUBSYS_00008086
+%E550ENC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_550E
+%E550ENC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_550E&SUBSYS_00008086
+%E550FNC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_550F
+%E550FNC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_550F&SUBSYS_00008086
+%E57B3NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57B3
+%E57B3NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57B3&SUBSYS_00008086
+%E57B4NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57B4
+%E57B4NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57B4&SUBSYS_00008086
+%E57B5NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_57B5
+%E57B5NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_57B5&SUBSYS_00008086
+%E57B6NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_57B6
+%E57B6NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_57B6&SUBSYS_00008086
+%E57B7NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57B7
+%E57B7NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57B7&SUBSYS_00008086
+%E57B8NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57B8
+%E57B8NC.DeviceDesc%            = I219_SS_NOK1.10.0.1,  PCI\VEN_8086&DEV_57B8&SUBSYS_00008086
+
+
+;Dell
+;  I219 U
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06B71028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06B91028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06BA1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06C51028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06C71028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DB1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DC1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DD1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DE1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DF1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_070D1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_070E1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_070F1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_07101028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_07111028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_071C1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_071D1028
+%E156FNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_156F&SUBSYS_071E1028
+%E156FNC.DeviceDesc%            = E156FNOULP.10.0.1,  PCI\VEN_8086&DEV_156F&SUBSYS_07271028
+
+%E1570NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_1570&SUBSYS_06BA1028
+%E1570NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_1570&SUBSYS_06B81028
+
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_079F1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A01028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A61028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A71028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A81028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07AA1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07AB1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07F31028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081A1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081B1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081C1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08151028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08161028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08341028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08171028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08791028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_087A1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_087B1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_09281028
+%E15D7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D7&SUBSYS_09291028
+
+%E15D8NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D8&SUBSYS_09281028
+%E15D8NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D8&SUBSYS_09291028
+
+%E15BDNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B71028
+%E15BDNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B81028
+%E15BDNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B91028
+%E15BDNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08BA1028
+%E15BDNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BD&SUBSYS_091B1028
+%E15BDNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BD&SUBSYS_091C1028
+%E15BDNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BD&SUBSYS_09C91028
+
+%E15BENC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BE&SUBSYS_08B71028
+%E15BENC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BE&SUBSYS_08B81028
+%E15BENC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BE&SUBSYS_08B91028
+%E15BENC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BE&SUBSYS_08BA1028
+%E15BENC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BE&SUBSYS_091B1028
+%E15BENC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BE&SUBSYS_091C1028
+%E15BENC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BE&SUBSYS_09C91028
+
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_099F1028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A01028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A11028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A21028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_0A401028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_0A411028
+
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_099F1028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_09A01028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_09A11028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_09A21028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_0A401028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_0A411028
+
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A201028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A2E1028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A2F1028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A9D1028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A9E1028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A211028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A221028
+
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FC&SUBSYS_0A201028
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FC&SUBSYS_0A211028
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15FC&SUBSYS_0A221028
+
+; I219 H
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06B71028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06B91028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06BA1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06C51028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06C71028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06D91028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DA1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DE1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DF1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06E01028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_070E1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_070F1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071C1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071D1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071E1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_07591028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_075C1028 
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_075D1028
+%E15B7NC.DeviceDesc%            = E15B7NOULP.10.0.1,  PCI\VEN_8086&DEV_15B7&SUBSYS_07271028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_07D71028
+%E15B7NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B7&SUBSYS_08AA1028
+
+%E15B8NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B8&SUBSYS_06BA1028
+%E15B8NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B8&SUBSYS_06B81028
+
+%E15B9NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B9&SUBSYS_07391028
+%E15B9NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15B9&SUBSYS_073A1028
+
+%E15D6NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D6&SUBSYS_079D1028
+%E15D6NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D6&SUBSYS_07A21028
+%E15D6NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D6&SUBSYS_07CD1028
+%E15D6NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15D6&SUBSYS_07D51028
+
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07381028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_079C1028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07A11028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07A91028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07B01028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07B11028
+
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07CC1028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D01028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D11028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D41028
+%E15E3NC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15E3&SUBSYS_08B11028
+
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084A1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084D1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084B1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084E1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_085A1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_085D1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08601028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08611028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08711028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08721028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08731028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08571028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08621028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08561028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08181028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08191028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08201028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08311028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08321028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08631028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08641028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08891028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_088A1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09181028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09191028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_091A1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09261028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09271028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_19261028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_19271028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_092E1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09311028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09341028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09371028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09351028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09381028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09721028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09731028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09421028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09431028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_095B1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_094B1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BB&SUBSYS_094D1028
+
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_084C1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_084F1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_08501028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_08511028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_085B1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_085E1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09181028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09191028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_091A1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_092F1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09321028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09361028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09391028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_094C1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1,       PCI\VEN_8086&DEV_15BC&SUBSYS_094E1028
+
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_098D1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09BF1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A41028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A51028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09AA1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09AB1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A61028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A71028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09861028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09871028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09841028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09851028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C01028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C11028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C21028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C31028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C41028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_19C31028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_19C41028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09F61028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09FA1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09881028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09891028
+
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09AC1028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09AD1028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09B81028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09881028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09891028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09C01028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09C11028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09C21028
+
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A661028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A671028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A681028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A691028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A6A1028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A461028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A471028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A481028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A491028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A521028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A531028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A541028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A551028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A561028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A571028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A581028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A591028
+
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A9F1028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA01028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A391028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA51028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3A1028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA61028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3B1028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA71028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3C1028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA81028
+
+[Intel.NTamd64.10.0.1..18362]
+; DisplayName                   Section                               DeviceID
+; -----------                   -------                               --------
+%E153ANC.DeviceDesc%            = I217.10.0.1.19H1,          PCI\VEN_8086&DEV_153A
+%E153ANC.DeviceDesc%            = I217.10.0.1.19H1,          PCI\VEN_8086&DEV_153A&SUBSYS_00008086
+%E153BNC.DeviceDesc%            = I217.10.0.1.19H1,          PCI\VEN_8086&DEV_153B
+%E153BNC.DeviceDesc%            = I217.10.0.1.19H1,          PCI\VEN_8086&DEV_153B&SUBSYS_00008086
+%E155ANC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_155A
+%E155ANC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_155A&SUBSYS_00008086
+%E1559NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_1559
+%E1559NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_1559&SUBSYS_00008086
+%E15A0NC.DeviceDesc%            = I217.10.0.1.19H1,          PCI\VEN_8086&DEV_15A0
+%E15A0NC.DeviceDesc%            = I217.10.0.1.19H1,          PCI\VEN_8086&DEV_15A0&SUBSYS_00008086
+%E15A1NC.DeviceDesc%            = I217.10.0.1.19H1,          PCI\VEN_8086&DEV_15A1
+%E15A1NC.DeviceDesc%            = I217.10.0.1.19H1,          PCI\VEN_8086&DEV_15A1&SUBSYS_00008086
+%E15A2NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15A2
+%E15A2NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15A2&SUBSYS_00008086
+%E15A3NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15A3
+%E15A3NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15A3&SUBSYS_00008086
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_156F
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_156F&SUBSYS_00008086
+%E1570NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_1570
+%E1570NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_1570&SUBSYS_00008086
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15B7
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15B7&SUBSYS_00008086
+%E15B8NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15B8
+%E15B8NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15B8&SUBSYS_00008086
+%E15B9NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15B9
+%E15B9NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15B9&SUBSYS_00008086
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15D7
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15D7&SUBSYS_00008086
+%E15D8NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15D8
+%E15D8NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15D8&SUBSYS_00008086
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15E3
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15E3&SUBSYS_00008086
+%E15D6NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15D6
+%E15D6NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15D6&SUBSYS_00008086
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15BB
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15BB&SUBSYS_00008086
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15BC
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15BC&SUBSYS_00008086
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15BD
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15BD&SUBSYS_00008086
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15BE
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15BE&SUBSYS_00008086
+%E15DFNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15DF
+%E15DFNC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15DF&SUBSYS_00008086
+%E15E0NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15E0
+%E15E0NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15E0&SUBSYS_00008086
+%E15E1NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15E1
+%E15E1NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15E1&SUBSYS_00008086
+%E15E2NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15E2
+%E15E2NC.DeviceDesc%            = I219.10.0.1.19H1,          PCI\VEN_8086&DEV_15E2&SUBSYS_00008086
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4E
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_00008086
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4F
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_00008086
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_00008086
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_00008086
+%E0D53NC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D53
+%E0D53NC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D53&SUBSYS_00008086
+%E0D55NC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D55
+%E0D55NC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D55&SUBSYS_00008086
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_00008086
+%E15FANC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FA
+%E15FANC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FA&SUBSYS_00008086
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_00008086
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FC
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FC&SUBSYS_00008086
+%E15F4NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F4
+%E15F4NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F4&SUBSYS_00008086
+%E1A1ENC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1E
+%E1A1ENC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1E&SUBSYS_00008086
+%E1A1FNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1F
+%E1A1FNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1F&SUBSYS_00008086
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_00008086
+%E1A1DNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1D
+%E1A1DNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1D&SUBSYS_00008086
+%E550ANC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_550A
+%E550ANC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_550A&SUBSYS_00008086
+%E550BNC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_550B
+%E550BNC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_550B&SUBSYS_00008086
+%E550CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_550C
+%E550CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_550C&SUBSYS_00008086
+%E550DNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_550D
+%E550DNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_550D&SUBSYS_00008086
+%E0DC5NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_0DC5
+%E0DC5NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_0DC5&SUBSYS_00008086
+%E0DC6NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_0DC6
+%E0DC6NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_0DC6&SUBSYS_00008086
+%E0DC7NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_0DC7
+%E0DC7NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_0DC7&SUBSYS_00008086
+%E0DC8NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_0DC8
+%E0DC8NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_0DC8&SUBSYS_00008086
+%E57A0NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57A0
+%E57A0NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57A0&SUBSYS_00008086
+%E57A1NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57A1
+%E57A1NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57A1&SUBSYS_00008086
+%E550ENC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_550E
+%E550ENC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_550E&SUBSYS_00008086
+%E550FNC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_550F
+%E550FNC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_550F&SUBSYS_00008086
+%E57B3NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57B3
+%E57B3NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57B3&SUBSYS_00008086
+%E57B4NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57B4
+%E57B4NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57B4&SUBSYS_00008086
+%E57B5NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_57B5
+%E57B5NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_57B5&SUBSYS_00008086
+%E57B6NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_57B6
+%E57B6NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_57B6&SUBSYS_00008086
+%E57B7NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57B7
+%E57B7NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57B7&SUBSYS_00008086
+%E57B8NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57B8
+%E57B8NC.DeviceDesc%            = I219_SS_NOK1.10.0.1.19H1,  PCI\VEN_8086&DEV_57B8&SUBSYS_00008086
+
+
+;Dell
+;  I219 U
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06B71028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06B91028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06BA1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06C51028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06C71028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DB1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DC1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DD1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DE1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DF1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_070D1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_070E1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_070F1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_07101028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_07111028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_071C1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_071D1028
+%E156FNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_071E1028
+%E156FNC.DeviceDesc%            = E156FNOULP.10.0.1.19H1,  PCI\VEN_8086&DEV_156F&SUBSYS_07271028
+
+%E1570NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_1570&SUBSYS_06BA1028
+%E1570NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_1570&SUBSYS_06B81028
+
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_079F1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A01028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A61028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A71028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A81028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07AA1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07AB1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07F31028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081A1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081B1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081C1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08151028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08161028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08341028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08171028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08791028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_087A1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_087B1028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_09281028
+%E15D7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_09291028
+
+%E15D8NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D8&SUBSYS_09281028
+%E15D8NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D8&SUBSYS_09291028
+
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B71028
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B81028
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B91028
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08BA1028
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_091B1028
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_091C1028
+%E15BDNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_09C91028
+
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BE&SUBSYS_08B71028
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BE&SUBSYS_08B81028
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BE&SUBSYS_08B91028
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BE&SUBSYS_08BA1028
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BE&SUBSYS_091B1028
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BE&SUBSYS_091C1028
+%E15BENC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BE&SUBSYS_09C91028
+
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_099F1028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A01028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A11028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A21028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_0A411028
+%E0D4ENC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_0A401028
+
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_099F1028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_09A01028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_09A11028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_09A21028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_0A411028
+%E0D4FNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4F&SUBSYS_0A401028
+
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A201028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A2E1028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A2F1028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A9D1028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A9E1028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A211028
+%E15FBNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A221028
+
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FC&SUBSYS_0A201028
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FC&SUBSYS_0A211028
+%E15FCNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15FC&SUBSYS_0A221028
+
+; I219 H
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06B71028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06B91028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06BA1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06C51028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06C71028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06D91028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DA1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DE1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DF1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06E01028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_070E1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_070F1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071C1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071D1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071E1028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_07591028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_075C1028 
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_075D1028
+%E15B7NC.DeviceDesc%            = E15B7NOULP.10.0.1.19H1,  PCI\VEN_8086&DEV_15B7&SUBSYS_07271028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_07D71028
+%E15B7NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_08AA1028
+
+%E15B8NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B8&SUBSYS_06BA1028
+%E15B8NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B8&SUBSYS_06B81028
+
+%E15B9NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B9&SUBSYS_07391028
+%E15B9NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15B9&SUBSYS_073A1028
+
+%E15D6NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D6&SUBSYS_079D1028
+%E15D6NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D6&SUBSYS_07A21028
+%E15D6NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D6&SUBSYS_07CD1028
+%E15D6NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15D6&SUBSYS_07D51028
+
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07381028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_079C1028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07A11028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07A91028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07B01028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07B11028
+
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07CC1028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D01028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D11028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D41028
+%E15E3NC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_08B11028
+
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084A1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084D1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084B1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084E1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_085A1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_085D1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08601028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08611028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08711028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08721028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08731028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08571028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08621028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08561028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08181028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08191028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08201028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08311028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08321028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08631028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08641028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08891028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_088A1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09181028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09191028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_091A1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09261028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09271028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_19261028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_19271028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_092E1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09311028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09341028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09371028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09351028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09381028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09721028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09731028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09421028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09431028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_095B1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_094B1028
+%E15BBNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_094D1028
+
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_084C1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_084F1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_08501028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_08511028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_085B1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_085E1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09181028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09191028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_091A1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_092F1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09321028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09361028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_09391028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_094C1028
+%E15BCNC.DeviceDesc%            = I219.10.0.1.19H1,       PCI\VEN_8086&DEV_15BC&SUBSYS_094E1028
+
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_098D1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09BF1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A41028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A51028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09AA1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09AB1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A61028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A71028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09861028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09871028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09841028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09851028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C01028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C11028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C21028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C31028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C41028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_19C31028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_19C41028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09F61028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09FA1028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09881028
+%E0D4CNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09891028
+
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09AC1028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09AD1028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09B81028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09881028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09891028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09C01028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09C11028
+%E0D4DNC.DeviceDesc%            = I219_MS.10.0.1.19H1,       PCI\VEN_8086&DEV_0D4D&SUBSYS_09C21028
+
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A661028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A671028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A681028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A691028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A6A1028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A461028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A471028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A481028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A491028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A521028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A531028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A541028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A551028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A561028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A571028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A581028
+%E15F9NC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A591028
+
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A9F1028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA01028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A391028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA51028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3A1028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA61028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3B1028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA71028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3C1028
+%E1A1CNC.DeviceDesc%            = I219_SS.10.0.1.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA81028
+
+[Intel.NTamd64.10.0...17763]
+; DisplayName                   Section       DeviceID
+; -----------                   -------       --------
+%E153ANC.DeviceDesc%            = I217,       PCI\VEN_8086&DEV_153A
+%E153ANC.DeviceDesc%            = I217,       PCI\VEN_8086&DEV_153A&SUBSYS_00008086
+%E155ANC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_155A
+%E155ANC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_155A&SUBSYS_00008086
+%E15A0NC.DeviceDesc%            = I217,       PCI\VEN_8086&DEV_15A0
+%E15A0NC.DeviceDesc%            = I217,       PCI\VEN_8086&DEV_15A0&SUBSYS_00008086
+%E15A2NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15A2
+%E15A2NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15A2&SUBSYS_00008086
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_00008086
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_00008086
+%E15B9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B9
+%E15B9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B9&SUBSYS_00008086
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_00008086
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_00008086
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_00008086
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD&SUBSYS_00008086
+%E15DFNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15DF
+%E15DFNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15DF&SUBSYS_00008086
+%E15E1NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E1
+%E15E1NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E1&SUBSYS_00008086
+%E0D4ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4E
+%E0D4ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4E&SUBSYS_00008086
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_00008086
+%E0D53NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D53
+%E0D53NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D53&SUBSYS_00008086
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_00008086
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB&SUBSYS_00008086
+%E15F4NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F4
+%E15F4NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F4&SUBSYS_00008086
+%E1A1ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1E
+%E1A1ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1E&SUBSYS_00008086
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_00008086
+%E550ANC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_550A
+%E550ANC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_550A&SUBSYS_00008086
+%E550CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_550C
+%E550CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_550C&SUBSYS_00008086
+%E0DC5NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0DC5
+%E0DC5NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0DC5&SUBSYS_00008086
+%E0DC7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0DC7
+%E0DC7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0DC7&SUBSYS_00008086
+%E57A0NC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_57A0
+%E57A0NC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_57A0&SUBSYS_00008086
+%E550ENC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_550E
+%E550ENC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_550E&SUBSYS_00008086
+%E57B3NC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_57B3
+%E57B3NC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_57B3&SUBSYS_00008086
+%E57B5NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_57B5
+%E57B5NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_57B5&SUBSYS_00008086
+%E57B7NC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_57B7
+%E57B7NC.DeviceDesc%            = I219_NOK1,  PCI\VEN_8086&DEV_57B7&SUBSYS_00008086
+
+
+;Dell
+;  I219 U
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06B71028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06B91028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06BA1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06C51028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06C71028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06DB1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06DC1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06DD1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06DE1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_06DF1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_070D1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_070E1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_070F1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_07101028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_07111028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_071C1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_071D1028
+%E156FNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_156F&SUBSYS_071E1028
+%E156FNC.DeviceDesc%            = E156FNOULP,  PCI\VEN_8086&DEV_156F&SUBSYS_07271028
+
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_079F1028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A01028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A61028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A71028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A81028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_07AA1028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_07AB1028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_07F31028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_081A1028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_081B1028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_081C1028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_08151028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_08161028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_08341028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_08171028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_08791028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_087A1028
+%E15D7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15D7&SUBSYS_087B1028
+
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B71028
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B81028
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B91028
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD&SUBSYS_08BA1028
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD&SUBSYS_091B1028
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD&SUBSYS_091C1028
+%E15BDNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BD&SUBSYS_09C91028
+
+%E0D4ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4E&SUBSYS_099F1028
+%E0D4ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A01028
+%E0D4ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A11028
+%E0D4ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A21028
+%E0D4ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4E&SUBSYS_0A411028
+%E0D4ENC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4E&SUBSYS_0A401028
+
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A201028
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A2E1028
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A2F1028
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A9D1028
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A9E1028
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A211028
+%E15FBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A221028
+
+; I219 H
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06B71028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06B91028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06BA1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06C51028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06C71028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06D91028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DA1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DE1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DF1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_06E01028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_070E1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_070F1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_071C1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_071D1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_071E1028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_07591028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_075C1028 
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_075D1028
+%E15B7NC.DeviceDesc%            = E15B7NOULP,  PCI\VEN_8086&DEV_15B7&SUBSYS_07271028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_07D71028
+%E15B7NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B7&SUBSYS_08AA1028
+
+%E15B8NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B8&SUBSYS_06BA1028
+%E15B8NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B8&SUBSYS_06B81028
+
+%E15B9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B9&SUBSYS_07391028
+%E15B9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15B9&SUBSYS_073A1028
+
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07381028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_079C1028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07A11028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07A91028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07B01028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07B11028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07CC1028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D01028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D11028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D41028
+%E15E3NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15E3&SUBSYS_08B11028
+
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_084A1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_084D1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_084B1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_084E1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_085A1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_085D1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08601028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08611028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08711028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08721028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08731028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08571028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08621028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08561028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08181028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08191028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08201028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08311028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08321028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08631028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08641028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_08891028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_088A1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09181028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09191028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_091A1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09261028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09271028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_19261028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_19271028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_092E1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09311028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09341028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09371028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09351028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09381028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09721028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09731028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09421028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_09431028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_095B1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_094B1028
+%E15BBNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15BB&SUBSYS_094D1028
+
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_098D1028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09BF1028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A41028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A51028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09AA1028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09AB1028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A61028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A71028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09861028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09871028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09841028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09851028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C01028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C11028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C21028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C31028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C41028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_19C31028
+%E0D4CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_0D4C&SUBSYS_19C41028
+
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A661028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A671028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A681028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A691028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A6A1028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A461028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A471028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A481028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A491028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A521028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A531028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A541028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A551028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A561028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A571028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A581028
+%E15F9NC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A591028
+
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A9F1028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA01028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A391028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA51028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3A1028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA61028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3B1028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA71028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3C1028
+%E1A1CNC.DeviceDesc%            = I219,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA81028
+
+[Intel.NTamd64.10.0...18362]
+; DisplayName                   Section            DeviceID
+; -----------                   -------            --------
+%E153ANC.DeviceDesc%            = I217.19H1,       PCI\VEN_8086&DEV_153A
+%E153ANC.DeviceDesc%            = I217.19H1,       PCI\VEN_8086&DEV_153A&SUBSYS_00008086
+%E155ANC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_155A
+%E155ANC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_155A&SUBSYS_00008086
+%E15A0NC.DeviceDesc%            = I217.19H1,       PCI\VEN_8086&DEV_15A0
+%E15A0NC.DeviceDesc%            = I217.19H1,       PCI\VEN_8086&DEV_15A0&SUBSYS_00008086
+%E15A2NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15A2
+%E15A2NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15A2&SUBSYS_00008086
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_00008086
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_00008086
+%E15B9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B9
+%E15B9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B9&SUBSYS_00008086
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_00008086
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_00008086
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_00008086
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_00008086
+%E15DFNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15DF
+%E15DFNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15DF&SUBSYS_00008086
+%E15E1NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E1
+%E15E1NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E1&SUBSYS_00008086
+%E0D4ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4E
+%E0D4ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_00008086
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_00008086
+%E0D53NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D53
+%E0D53NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D53&SUBSYS_00008086
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_00008086
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_00008086
+%E15F4NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F4
+%E15F4NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F4&SUBSYS_00008086
+%E1A1ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1E
+%E1A1ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1E&SUBSYS_00008086
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_00008086
+%E550ANC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_550A
+%E550ANC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_550A&SUBSYS_00008086
+%E550CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_550C
+%E550CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_550C&SUBSYS_00008086
+%E0DC5NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0DC5
+%E0DC5NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0DC5&SUBSYS_00008086
+%E0DC7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0DC7
+%E0DC7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0DC7&SUBSYS_00008086
+%E57A0NC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_57A0
+%E57A0NC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_57A0&SUBSYS_00008086
+%E550ENC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_550E
+%E550ENC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_550E&SUBSYS_00008086
+%E57B3NC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_57B3
+%E57B3NC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_57B3&SUBSYS_00008086
+%E57B5NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_57B5
+%E57B5NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_57B5&SUBSYS_00008086
+%E57B7NC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_57B7
+%E57B7NC.DeviceDesc%            = I219_NOK1.19H1,  PCI\VEN_8086&DEV_57B7&SUBSYS_00008086
+    
+;Dell
+;  I219 U
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06B71028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06B91028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06BA1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06C51028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06C71028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DB1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DC1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DD1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DE1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_06DF1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_070D1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_070E1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_070F1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_07101028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_07111028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_071C1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_071D1028
+%E156FNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_156F&SUBSYS_071E1028
+%E156FNC.DeviceDesc%            = E156FNOULP.19H1,  PCI\VEN_8086&DEV_156F&SUBSYS_07271028
+
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_079F1028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A01028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A61028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A71028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07A81028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07AA1028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07AB1028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_07F31028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081A1028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081B1028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_081C1028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08151028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08161028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08341028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08171028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_08791028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_087A1028
+%E15D7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15D7&SUBSYS_087B1028
+
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B71028
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B81028
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08B91028
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_08BA1028
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_091B1028
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_091C1028
+%E15BDNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BD&SUBSYS_09C91028
+
+%E0D4ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_099F1028
+%E0D4ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A01028
+%E0D4ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A11028
+%E0D4ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_09A21028
+%E0D4ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_0A411028
+%E0D4ENC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4E&SUBSYS_0A401028
+
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A201028
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A2E1028
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A2F1028
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A9D1028
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A9E1028
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A211028
+%E15FBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15FB&SUBSYS_0A221028
+
+; I219 H
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06B71028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06B91028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06BA1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06C51028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06C71028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06D91028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DA1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DE1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06DF1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_06E01028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_070E1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_070F1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071C1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071D1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_071E1028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_07591028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_075C1028 
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_075D1028
+%E15B7NC.DeviceDesc%            = E15B7NOULP.19H1,  PCI\VEN_8086&DEV_15B7&SUBSYS_07271028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_07D71028
+%E15B7NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B7&SUBSYS_08AA1028
+
+%E15B8NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B8&SUBSYS_06BA1028
+%E15B8NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B8&SUBSYS_06B81028
+
+%E15B9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B9&SUBSYS_07391028
+%E15B9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15B9&SUBSYS_073A1028
+
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07381028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_079C1028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07A11028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07A91028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07B01028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07B11028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07CC1028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D01028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D11028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_07D41028
+%E15E3NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15E3&SUBSYS_08B11028
+
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084A1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084D1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084B1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_084E1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_085A1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_085D1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08601028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08611028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08711028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08721028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08731028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08571028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08621028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08561028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08181028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08191028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08201028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08311028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08321028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08631028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08641028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_08891028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_088A1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09181028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09191028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_091A1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09261028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09271028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_19261028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_19271028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_092E1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09311028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09341028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09371028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09351028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09381028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09721028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09731028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09421028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_09431028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_095B1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_094B1028
+%E15BBNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15BB&SUBSYS_094D1028
+
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_098D1028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09BF1028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A41028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A51028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09AA1028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09AB1028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A61028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09A71028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09861028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09871028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09841028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09851028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C01028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C11028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C21028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C31028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_09C41028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_19C31028
+%E0D4CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_0D4C&SUBSYS_19C41028
+
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A661028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A671028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A681028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A691028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A6A1028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A461028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A471028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A481028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A491028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A521028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A531028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A541028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A551028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A561028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A571028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A581028
+%E15F9NC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_15F9&SUBSYS_0A591028
+
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A9F1028
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA01028  
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A391028  
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA51028  
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3A1028  
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA61028  
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3B1028  
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA71028  
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0A3C1028  
+%E1A1CNC.DeviceDesc%            = I219.19H1,       PCI\VEN_8086&DEV_1A1C&SUBSYS_0AA81028           
+
+;===============================================================================
+
+;                WINDOWS 10/11 for 64-bit EXTENDED PLATFORMS
+
+;
+;===============================================================================
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection I217-LM
+
+; Intel(R) Ethernet Connection I217-V
+
+; Intel(R) Ethernet Connection (2) I218-LM
+
+; Intel(R) Ethernet Connection (2) I218-V
+;-------------------------------------------------------------------------------
+[I217.10.0.1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I217.10.0.1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I217.10.0.1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection I218-LM
+
+; Intel(R) Ethernet Connection I218-V
+
+; Intel(R) Ethernet Connection (3) I218-LM
+
+; Intel(R) Ethernet Connection (3) I218-V
+
+; Intel(R) Ethernet Connection I219-LM
+
+; Intel(R) Ethernet Connection I219-V
+
+; Intel(R) Ethernet Connection (2) I219-LM
+
+; Intel(R) Ethernet Connection (2) I219-V
+
+; Intel(R) Ethernet Connection (3) I219-LM
+
+; Intel(R) Ethernet Connection (4) I219-LM
+
+; Intel(R) Ethernet Connection (4) I219-V
+
+; Intel(R) Ethernet Connection (5) I219-LM
+
+; Intel(R) Ethernet Connection (5) I219-V
+
+; Intel(R) Ethernet Connection (6) I219-LM
+
+; Intel(R) Ethernet Connection (6) I219-V
+
+; Intel(R) Ethernet Connection (7) I219-LM
+
+; Intel(R) Ethernet Connection (7) I219-V
+
+; Intel(R) Ethernet Connection (8) I219-LM
+
+; Intel(R) Ethernet Connection (8) I219-V
+
+; Intel(R) Ethernet Connection (9) I219-LM
+
+; Intel(R) Ethernet Connection (9) I219-V
+
+;-------------------------------------------------------------------------------
+; Intel(R) Ethernet Connection I219-LM ULP OFF
+;
+
+[E156FNOULP.10.0.1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+;AddReg             = RSS.reg				//no Rss in 12.19.2.66
+AddReg             = EEE.reg
+AddReg             = ULPOFF.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[E156FNOULP.10.0.1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[E156FNOULP.10.0.1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+; Intel(R) Ethernet Connection (2) I219-LM ULP OFF
+;
+
+[E15B7NOULP.10.0.1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+;AddReg             = RSS.reg				//no Rss in 12.19.2.66
+AddReg             = EEE.reg
+AddReg             = ULPOFF.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[E15B7NOULP.10.0.1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[E15B7NOULP.10.0.1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+; Intel(R) Ethernet Connection I219-LM ULP OFF
+;
+
+[E156FNOULP.10.0.1.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+;AddReg             = RSS.reg				//no Rss in 12.19.2.66
+AddReg             = EEE.reg
+AddReg             = ULPOFF.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[E156FNOULP.10.0.1.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[E156FNOULP.10.0.1.19H1.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+; Intel(R) Ethernet Connection (2) I219-LM ULP OFF
+;
+
+[E15B7NOULP.10.0.1.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+;AddReg             = RSS.reg				//no Rss in 12.19.2.66
+AddReg             = EEE.reg
+AddReg             = ULPOFF.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[E15B7NOULP.10.0.1.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[E15B7NOULP.10.0.1.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+; Intel(R) Ethernet Connection I219-LM - ULP OFF
+;
+[E156FNOULP]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+;AddReg             = RSS.reg				//no Rss in 12.19.2.66
+AddReg             = EEE.reg
+AddReg             = ULPOFF.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[E156FNOULP.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[E156FNOULP.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+; Intel(R) Ethernet Connection (2) I219-LM - ULP OFF
+;
+[E15B7NOULP]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+;AddReg             = RSS.reg				//no Rss in 12.19.2.66
+AddReg             = EEE.reg
+AddReg             = ULPOFF.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[E15B7NOULP.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[E15B7NOULP.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+; Intel(R) Ethernet Connection I219-LM - ULP OFF
+;
+[E156FNOULP.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+;AddReg             = RSS.reg				//no Rss in 12.19.2.66
+AddReg             = EEE.reg
+AddReg             = ULPOFF.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[E156FNOULP.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[E156FNOULP.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+; Intel(R) Ethernet Connection (2) I219-LM - ULP OFF
+;
+[E15B7NOULP.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+;AddReg             = RSS.reg				//no Rss in 12.19.2.66
+AddReg             = EEE.reg
+AddReg             = ULPOFF.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[E15B7NOULP.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[E15B7NOULP.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+[I219.10.0.1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219.10.0.1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219.10.0.1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection (10) I219-LM
+
+; Intel(R) Ethernet Connection (10) I219-V
+
+; Intel(R) Ethernet Connection (11) I219-LM
+
+; Intel(R) Ethernet Connection (11) I219-V
+
+; Intel(R) Ethernet Connection (12) I219-LM
+
+; Intel(R) Ethernet Connection (12) I219-V
+;-------------------------------------------------------------------------------
+[I219_MS.10.0.1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = ModernStandbyWoLMagicPacket.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219_MS.10.0.1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219_MS.10.0.1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection (14) I219-LM
+
+; Intel(R) Ethernet Connection (14) I219-V
+
+; Intel(R) Ethernet Connection (13) I219-LM
+
+; Intel(R) Ethernet Connection (13) I219-V
+
+; Intel(R) Ethernet Connection (15) I219-LM
+
+; Intel(R) Ethernet Connection (16) I219-LM
+
+; Intel(R) Ethernet Connection (16) I219-V
+
+; Intel(R) Ethernet Connection (17) I219-LM
+
+; Intel(R) Ethernet Connection (17) I219-V
+
+; Intel(R) Ethernet Connection (23) I219-LM
+
+; Intel(R) Ethernet Connection (23) I219-V
+
+; Intel(R) Ethernet Connection (22) I219-LM
+
+; Intel(R) Ethernet Connection (22) I219-V
+
+; Intel(R) Ethernet Connection (19) I219-LM
+
+; Intel(R) Ethernet Connection (19) I219-V
+
+; Intel(R) Ethernet Connection (26) I219-LM
+
+; Intel(R) Ethernet Connection (26) I219-V
+;-------------------------------------------------------------------------------
+[I219_SS.10.0.1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = ModernStandbyWoLMagicPacket.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = SelectiveSuspend.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219_SS.10.0.1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219_SS.10.0.1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection (18) I219-LM
+
+; Intel(R) Ethernet Connection (18) I219-V
+
+; Intel(R) Ethernet Connection (20) I219-LM
+
+; Intel(R) Ethernet Connection (20) I219-V
+
+; Intel(R) Ethernet Connection (24) I219-LM
+
+; Intel(R) Ethernet Connection (24) I219-V
+
+; Intel(R) Ethernet Connection (25) I219-LM
+
+; Intel(R) Ethernet Connection (25) I219-V
+
+; Intel(R) Ethernet Connection (27) I219-LM
+
+; Intel(R) Ethernet Connection (27) I219-V
+;-------------------------------------------------------------------------------
+[I219_SS_NOK1.10.0.1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = ModernStandbyWoLMagicPacket.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = SelectiveSuspend.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = disableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219_SS_NOK1.10.0.1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219_SS_NOK1.10.0.1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+    
+        
+    
+    
+    
+    
+    
+    
+    
+
+;===============================================================================
+
+;                WINDOWS 10 / 11 /  2022 for 64-bit EXTENDED PLATFORMS
+
+;
+;===============================================================================
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection I217-LM
+
+; Intel(R) Ethernet Connection I217-V
+
+; Intel(R) Ethernet Connection (2) I218-LM
+
+; Intel(R) Ethernet Connection (2) I218-V
+;-------------------------------------------------------------------------------
+
+[I217.10.0.1.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I217.10.0.1.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I217.10.0.1.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection I218-LM
+
+; Intel(R) Ethernet Connection I218-V
+
+; Intel(R) Ethernet Connection (3) I218-LM
+
+; Intel(R) Ethernet Connection (3) I218-V
+
+; Intel(R) Ethernet Connection I219-LM
+
+; Intel(R) Ethernet Connection I219-V
+
+; Intel(R) Ethernet Connection (2) I219-LM
+
+; Intel(R) Ethernet Connection (2) I219-V
+
+; Intel(R) Ethernet Connection (3) I219-LM
+
+; Intel(R) Ethernet Connection (4) I219-LM
+
+; Intel(R) Ethernet Connection (4) I219-V
+
+; Intel(R) Ethernet Connection (5) I219-LM
+
+; Intel(R) Ethernet Connection (5) I219-V
+
+; Intel(R) Ethernet Connection (6) I219-LM
+
+; Intel(R) Ethernet Connection (6) I219-V
+
+; Intel(R) Ethernet Connection (7) I219-LM
+
+; Intel(R) Ethernet Connection (7) I219-V
+
+; Intel(R) Ethernet Connection (8) I219-LM
+
+; Intel(R) Ethernet Connection (8) I219-V
+
+; Intel(R) Ethernet Connection (9) I219-LM
+
+; Intel(R) Ethernet Connection (9) I219-V
+;-------------------------------------------------------------------------------
+[I219.10.0.1.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219.10.0.1.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219.10.0.1.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection (10) I219-LM
+
+; Intel(R) Ethernet Connection (10) I219-V
+
+; Intel(R) Ethernet Connection (11) I219-LM
+
+; Intel(R) Ethernet Connection (11) I219-V
+
+; Intel(R) Ethernet Connection (12) I219-LM
+
+; Intel(R) Ethernet Connection (12) I219-V
+;-------------------------------------------------------------------------------
+[I219_MS.10.0.1.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = ModernStandbyWoLMagicPacket.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219_MS.10.0.1.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219_MS.10.0.1.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection (14) I219-LM
+
+; Intel(R) Ethernet Connection (14) I219-V
+
+; Intel(R) Ethernet Connection (13) I219-LM
+
+; Intel(R) Ethernet Connection (13) I219-V
+
+; Intel(R) Ethernet Connection (15) I219-LM
+
+; Intel(R) Ethernet Connection (16) I219-LM
+
+; Intel(R) Ethernet Connection (16) I219-V
+
+; Intel(R) Ethernet Connection (17) I219-LM
+
+; Intel(R) Ethernet Connection (17) I219-V
+
+; Intel(R) Ethernet Connection (23) I219-LM
+
+; Intel(R) Ethernet Connection (23) I219-V
+
+; Intel(R) Ethernet Connection (22) I219-LM
+
+; Intel(R) Ethernet Connection (22) I219-V
+
+; Intel(R) Ethernet Connection (19) I219-LM
+
+; Intel(R) Ethernet Connection (19) I219-V
+
+; Intel(R) Ethernet Connection (26) I219-LM
+
+; Intel(R) Ethernet Connection (26) I219-V
+;-------------------------------------------------------------------------------
+[I219_SS.10.0.1.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = ModernStandbyWoLMagicPacket.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = SelectiveSuspend.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219_SS.10.0.1.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219_SS.10.0.1.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection (18) I219-LM
+
+; Intel(R) Ethernet Connection (18) I219-V
+
+; Intel(R) Ethernet Connection (20) I219-LM
+
+; Intel(R) Ethernet Connection (20) I219-V
+
+; Intel(R) Ethernet Connection (24) I219-LM
+
+; Intel(R) Ethernet Connection (24) I219-V
+
+; Intel(R) Ethernet Connection (25) I219-LM
+
+; Intel(R) Ethernet Connection (25) I219-V
+
+; Intel(R) Ethernet Connection (27) I219-LM
+
+; Intel(R) Ethernet Connection (27) I219-V
+;-------------------------------------------------------------------------------
+[I219_SS_NOK1.10.0.1.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = ModernStandbyWoLMagicPacket.reg
+AddReg             = RTD3.reg
+AddReg             = AcDcLink.reg
+AddReg             = IntelANSVlanID.reg
+AddReg             = NDISVlanId.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = SelectiveSuspend.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = disableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219_SS_NOK1.10.0.1.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219_SS_NOK1.10.0.1.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+    
+        
+    
+    
+
+;===============================================================================
+;
+
+;                Windows Server 2019 
+
+;
+;===============================================================================
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection I217-LM
+
+; Intel(R) Ethernet Connection I217-V
+
+; Intel(R) Ethernet Connection (2) I218-LM
+
+; Intel(R) Ethernet Connection (2) I218-V
+;-------------------------------------------------------------------------------
+
+[I217]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I217.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I217.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection I218-LM
+
+; Intel(R) Ethernet Connection (3) I218-LM
+
+; Intel(R) Ethernet Connection I219-LM
+
+; Intel(R) Ethernet Connection (2) I219-LM
+
+; Intel(R) Ethernet Connection (3) I219-LM
+
+; Intel(R) Ethernet Connection (4) I219-LM
+
+; Intel(R) Ethernet Connection (5) I219-LM
+
+; Intel(R) Ethernet Connection (6) I219-LM
+
+; Intel(R) Ethernet Connection (7) I219-LM
+
+; Intel(R) Ethernet Connection (8) I219-LM
+
+; Intel(R) Ethernet Connection (9) I219-LM
+
+; Intel(R) Ethernet Connection (10) I219-LM
+
+; Intel(R) Ethernet Connection (11) I219-LM
+
+; Intel(R) Ethernet Connection (12) I219-LM
+
+; Intel(R) Ethernet Connection (13) I219-LM
+
+; Intel(R) Ethernet Connection (14) I219-LM
+
+; Intel(R) Ethernet Connection (15) I219-LM
+
+; Intel(R) Ethernet Connection (16) I219-LM
+
+; Intel(R) Ethernet Connection (17) I219-LM
+
+; Intel(R) Ethernet Connection (19) I219-LM
+
+; Intel(R) Ethernet Connection (22) I219-LM
+
+; Intel(R) Ethernet Connection (23) I219-LM
+
+; Intel(R) Ethernet Connection (26) I219-LM
+;-------------------------------------------------------------------------------
+[I219]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection (18) I219-LM
+
+; Intel(R) Ethernet Connection (20) I219-LM
+
+; Intel(R) Ethernet Connection (24) I219-LM
+
+; Intel(R) Ethernet Connection (25) I219-LM
+
+; Intel(R) Ethernet Connection (27) I219-LM
+;-------------------------------------------------------------------------------
+[I219_NOK1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = disableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219_NOK1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219_NOK1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+    
+        
+    
+    
+
+;===============================================================================
+;
+
+;                WINDOWS Server 2022 for 64-bit EXTENDED PLATFORMS
+
+;
+;===============================================================================
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection I217-LM
+
+; Intel(R) Ethernet Connection I217-V
+
+; Intel(R) Ethernet Connection (2) I218-LM
+
+; Intel(R) Ethernet Connection (2) I218-V
+;-------------------------------------------------------------------------------
+[I217.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I217.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I217.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection I218-LM
+
+; Intel(R) Ethernet Connection (3) I218-LM
+
+; Intel(R) Ethernet Connection I219-LM
+
+; Intel(R) Ethernet Connection (2) I219-LM
+
+; Intel(R) Ethernet Connection (3) I219-LM
+
+; Intel(R) Ethernet Connection (4) I219-LM
+
+; Intel(R) Ethernet Connection (5) I219-LM
+
+; Intel(R) Ethernet Connection (6) I219-LM
+
+; Intel(R) Ethernet Connection (7) I219-LM
+
+; Intel(R) Ethernet Connection (8) I219-LM
+
+; Intel(R) Ethernet Connection (9) I219-LM
+
+; Intel(R) Ethernet Connection (10) I219-LM
+
+; Intel(R) Ethernet Connection (11) I219-LM
+
+; Intel(R) Ethernet Connection (12) I219-LM
+
+; Intel(R) Ethernet Connection (13) I219-LM
+
+; Intel(R) Ethernet Connection (14) I219-LM
+
+; Intel(R) Ethernet Connection (15) I219-LM
+
+; Intel(R) Ethernet Connection (16) I219-LM
+
+; Intel(R) Ethernet Connection (17) I219-LM
+
+; Intel(R) Ethernet Connection (19) I219-LM
+
+; Intel(R) Ethernet Connection (22) I219-LM
+
+; Intel(R) Ethernet Connection (23) I219-LM
+
+; Intel(R) Ethernet Connection (26) I219-LM
+;-------------------------------------------------------------------------------
+[I219.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = enableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+
+; Intel(R) Ethernet Connection (18) I219-LM
+
+; Intel(R) Ethernet Connection (20) I219-LM
+
+; Intel(R) Ethernet Connection (24) I219-LM
+
+; Intel(R) Ethernet Connection (25) I219-LM
+
+; Intel(R) Ethernet Connection (27) I219-LM
+;-------------------------------------------------------------------------------
+[I219_NOK1.19H1]
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 5    ; PCI
+DelReg             = Advanced.DelReg
+AddReg             = e1d.reg, TcpSeg.reg, JumboPacket.reg, SVOFFMode.reg
+AddReg             = Copper.reg, Copper1000.reg, Autoneg10100.reg
+AddReg             = AcDcLink.reg
+AddReg             = Powermgmt.reg, WakeOnSlot.reg
+AddReg             = Sips.reg
+AddReg             = Po.reg
+AddReg             = EEE.reg
+AddReg             = ulp.reg
+AddReg             = disableK1.reg
+AddReg             = UninstallW2.reg
+AddReg             = CoInKS.reg
+AddReg             = NDISVlanId.reg
+AddReg             = PtpHardwareTimestamp.reg
+AddReg             = SoftwareTimestamp.reg
+CopyFiles          = winblue.CopyFiles, MessageDll.CopyFiles
+*IfType            = 6    ; IF_TYPE_ETHERNET_CSMACD
+*MediaType         = 0    ; NdisMedium802_3
+*PhysicalMediaType = 14 ; NdisPhysicalMedium802_3
+
+[I219_NOK1.19H1.Services]
+AddService = e1dexpress, 2, winblue.Service, winblue.EventLog
+
+[I219_NOK1.19H1.HW]
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+AddReg             = MSI.reg
+
+;-------------------------------------------------------------------------------
+; Registry Settings (decimal)
+;
+[e1d.reg]
+HKR, Ndi\Interfaces,                                    UpperRange,             0, "ndis5"
+HKR, Ndi\Interfaces,                                    LowerRange,             0, "ethernet"
+HKR, Ndi,                                               Service,                0, "e1dexpress"
+
+; *FlowControl
+HKR, Ndi\Params\*FlowControl,                           ParamDesc,              0, %FlowControl%
+HKR, Ndi\Params\*FlowControl,                           default,                0, "4"
+HKR, Ndi\Params\*FlowControl\Enum,                      "0",                    0, %Disabled%
+HKR, Ndi\Params\*FlowControl\Enum,                      "1",                    0, %FlowControl_TxOnly%
+HKR, Ndi\Params\*FlowControl\Enum,                      "2",                    0, %FlowControl_RxOnly%
+HKR, Ndi\Params\*FlowControl\Enum,                      "3",                    0, %FlowControl_Full%
+HKR, Ndi\Params\*FlowControl\Enum,                      "4",                    0, %AutoNegotiation%
+HKR, Ndi\Params\*FlowControl,                           type,                   0, "enum"
+
+; *TransmitBuffers
+HKR, Ndi\params\*TransmitBuffers,                       ParamDesc,              0, %TransmitBuffers%
+HKR, Ndi\params\*TransmitBuffers,                       default,                0, "512"
+HKR, Ndi\params\*TransmitBuffers,                       min,                    0, "80"
+HKR, Ndi\params\*TransmitBuffers,                       max,                    0, "16384"
+HKR, Ndi\params\*TransmitBuffers,                       step,                   0, "8"
+HKR, Ndi\params\*TransmitBuffers,                       Base,                   0, "10"
+HKR, Ndi\params\*TransmitBuffers,                       type,                   0, "int"
+
+; *ReceiveBuffers
+HKR, Ndi\params\*ReceiveBuffers,                        ParamDesc,              0, %ReceiveBuffers%
+HKR, Ndi\params\*ReceiveBuffers,                        default,                0, "256"
+HKR, Ndi\params\*ReceiveBuffers,                        min,                    0, "80"
+HKR, Ndi\params\*ReceiveBuffers,                        max,                    0, "16384"
+HKR, Ndi\params\*ReceiveBuffers,                        step,                   0, "8"
+HKR, Ndi\params\*ReceiveBuffers,                        Base,                   0, "10"
+HKR, Ndi\params\*ReceiveBuffers,                        type,                   0, "int"
+
+; *TCPChecksumOffloadIPv4
+HKR, Ndi\Params\*TCPChecksumOffloadIPv4,                ParamDesc,              0, %TCPChksumOffv4%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv4,                default,                0, "3"
+HKR, Ndi\Params\*TCPChecksumOffloadIPv4\Enum,           "0",                    0, %Disabled%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv4\Enum,           "1",                    0, %ChksumOffTx%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv4\Enum,           "2",                    0, %ChksumOffRx%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv4\Enum,           "3",                    0, %ChksumOffTxRx%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv4,                type,                   0, "enum"
+
+; *TCPChecksumOffloadIPv6
+HKR, Ndi\Params\*TCPChecksumOffloadIPv6,                ParamDesc,              0, %TCPChksumOffv6%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv6,                default,                0, "3"
+HKR, Ndi\Params\*TCPChecksumOffloadIPv6\Enum,           "0",                    0, %Disabled%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv6\Enum,           "1",                    0, %ChksumOffTx%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv6\Enum,           "2",                    0, %ChksumOffRx%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv6\Enum,           "3",                    0, %ChksumOffTxRx%
+HKR, Ndi\Params\*TCPChecksumOffloadIPv6,                type,                   0, "enum"
+
+; *UDPChecksumOffloadIPv4
+HKR, Ndi\Params\*UDPChecksumOffloadIPv4,                ParamDesc,              0, %UDPChksumOffv4%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv4,                default,                0, "3"
+HKR, Ndi\Params\*UDPChecksumOffloadIPv4\Enum,           "0",                    0, %Disabled%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv4\Enum,           "1",                    0, %ChksumOffTx%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv4\Enum,           "2",                    0, %ChksumOffRx%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv4\Enum,           "3",                    0, %ChksumOffTxRx%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv4,                type,                   0, "enum"
+
+; *UDPChecksumOffloadIPv6
+HKR, Ndi\Params\*UDPChecksumOffloadIPv6,                ParamDesc,              0, %UDPChksumOffv6%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv6,                default,                0, "3"
+HKR, Ndi\Params\*UDPChecksumOffloadIPv6\Enum,           "0",                    0, %Disabled%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv6\Enum,           "1",                    0, %ChksumOffTx%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv6\Enum,           "2",                    0, %ChksumOffRx%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv6\Enum,           "3",                    0, %ChksumOffTxRx%
+HKR, Ndi\Params\*UDPChecksumOffloadIPv6,                type,                   0, "enum"
+
+; *IPChecksumOffloadIPv4
+HKR, Ndi\Params\*IPChecksumOffloadIPv4,                 ParamDesc,              0, %IPChksumOffv4%
+HKR, Ndi\Params\*IPChecksumOffloadIPv4,                 default,                0, "3"
+HKR, Ndi\Params\*IPChecksumOffloadIPv4\Enum,            "0",                    0, %Disabled%
+HKR, Ndi\Params\*IPChecksumOffloadIPv4\Enum,            "1",                    0, %ChksumOffTx%
+HKR, Ndi\Params\*IPChecksumOffloadIPv4\Enum,            "2",                    0, %ChksumOffRx%
+HKR, Ndi\Params\*IPChecksumOffloadIPv4\Enum,            "3",                    0, %ChksumOffTxRx%
+HKR, Ndi\Params\*IPChecksumOffloadIPv4,                 type,                   0, "enum"
+
+; Network Address
+HKR, Ndi\params\NetworkAddress,                         ParamDesc,              0, %LAA%
+HKR, Ndi\params\NetworkAddress,                         Default,                0, ""
+HKR, Ndi\params\NetworkAddress,                         type,                   0, "edit"
+HKR, NDI\params\NetworkAddress,                         LimitText,              0, "12"
+HKR, NDI\params\NetworkAddress,                         UpperCase,              0, "1"
+HKR, NDI\params\NetworkAddress,                         optional,               0, "1"
+
+;Log Link State Event
+HKR,Ndi\Params\LogLinkStateEvent,                       ParamDesc,              0, %LogLinkState%
+HKR,Ndi\Params\LogLinkStateEvent,                       Type,                   0, "enum"
+HKR,Ndi\Params\LogLinkStateEvent,                       Default,                0, "51"
+HKR,Ndi\Params\LogLinkStateEvent\Enum,                  "51",                   0, %Enabled%
+HKR,Ndi\Params\LogLinkStateEvent\Enum,                  "16",                   0, %Disabled%
+HKR,,                                                   LogLinkStateEvent,      0, "51"
+
+; Wait for Link
+HKR, Ndi\Params\WaitAutoNegComplete,                    ParamDesc,              0, %WaitAutoNegComplete%
+HKR, Ndi\Params\WaitAutoNegComplete,                    default,                0, "2"
+HKR, Ndi\Params\WaitAutoNegComplete\Enum,               "0",                    0, %Off%
+HKR, Ndi\Params\WaitAutoNegComplete\Enum,               "1",                    0, %On%
+HKR, Ndi\Params\WaitAutoNegComplete\Enum,               "2",                    0, %AutoDetect%
+HKR, Ndi\Params\WaitAutoNegComplete,                    type,                   0, "enum"
+
+;  Interrupt Throttle Rate
+HKR, Ndi\Params\ITR,                                    ParamDesc,              0, %InterruptThrottleRate%
+HKR, Ndi\Params\ITR,                                    default,                0, "65535"
+HKR, Ndi\Params\ITR\Enum,                               "65535",                0, %Adaptive%
+HKR, Ndi\Params\ITR\Enum,                               "3600",                 0, %Extreme%
+HKR, Ndi\Params\ITR\Enum,                               "2000",                 0, %High%
+HKR, Ndi\Params\ITR\Enum,                               "950",                  0, %Medium%
+HKR, Ndi\Params\ITR\Enum,                               "400",                  0, %Low%
+HKR, Ndi\Params\ITR\Enum,                               "200",                  0, %Minimal%
+HKR, Ndi\Params\ITR\Enum,                               "0",                    0, %Off%
+HKR, Ndi\Params\ITR,                                    type,                   0, "enum"
+HKR,,                                                   ITR,                    0, "65535"
+
+; *InterruptModeration
+HKR, Ndi\Params\*InterruptModeration,                   ParamDesc,              0, %InterruptModeration%
+HKR, Ndi\Params\*InterruptModeration,                   default,                0, "1"
+HKR, Ndi\Params\*InterruptModeration\Enum,              "0",                    0, %Disabled%
+HKR, Ndi\Params\*InterruptModeration\Enum,              "1",                    0, %Enabled%
+HKR, Ndi\Params\*InterruptModeration,                   type,                   0, "enum"
+
+; *PriorityVLANTag
+HKR, Ndi\Params\*PriorityVLANTag,                       ParamDesc,              0, %PriorityVLANTag2%
+HKR, Ndi\Params\*PriorityVLANTag,                       default,                0, "3"
+HKR, Ndi\Params\*PriorityVLANTag\Enum,                  "0",                    0, %PriorityVlanDisabled2%
+HKR, Ndi\Params\*PriorityVLANTag\Enum,                  "1",                    0, %PriorityEnabled2%
+HKR, Ndi\Params\*PriorityVLANTag\Enum,                  "2",                    0, %VlanEnabled%
+HKR, Ndi\Params\*PriorityVLANTag\Enum,                  "3",                    0, %PriorityVlanEnabled2%
+HKR, Ndi\Params\*PriorityVLANTag,                       type,                   0, "enum"
+
+; ReduceSpeedOnPowerDown
+HKR,Ndi\Params\ReduceSpeedOnPowerDown,                  ParamDesc,              0, %ReduceSpeedOnPowerDown%
+HKR,Ndi\Params\ReduceSpeedOnPowerDown,                  Type,                   0, "enum"
+HKR,Ndi\Params\ReduceSpeedOnPowerDown,                  Default,                0, "1"
+HKR,Ndi\Params\ReduceSpeedOnPowerDown\Enum,             "1",                    0, %Enabled%
+HKR,Ndi\Params\ReduceSpeedOnPowerDown\Enum,             "0",                    0, %Disabled%
+
+; EnablePME
+HKR,Ndi\Params\EnablePME,                               ParamDesc,              0, %Enable_PME%
+HKR,Ndi\Params\EnablePME,                               Type,                   0, "enum"
+HKR,Ndi\Params\EnablePME,                               Default,                0, "1"
+HKR,Ndi\Params\EnablePME\Enum,                          "1",                    0, %Enabled%
+HKR,Ndi\Params\EnablePME\Enum,                          "0",                    0, %Disabled%
+
+; Hardwired defaults
+HKR,,                                                   PciScanMethod,          0, "3"
+HKR,,                                                   TxIntDelay,             0, "28"
+HKR,,                                                   MulticastFilterType,    0, "0"
+HKR,,                                                   VlanFiltering,          0, "0"
+HKR,,                                                   UniversalInstall,       0x00010001, 1
+
+; temporary workaround for MSI. NDIS blocks registration
+HKR,,                                                   EnableMSI,              0x00010001, "1"
+
+; Advanced Power Consumption Features
+HKR,,                                                   AutoPowerSaveModeEnabled, 0, "0"
+HKR,,                                                   ProcessLSCinWorkItem,     0, "1"
+HKR,,                                                   Enable9KJFTpt,            0, "1"
+
+; RSS - Hash Only Mode
+HKR,,                                                   ReceiveScalingMode,     2, "1"
+
+[ulp.reg]
+; ULP Mode
+HKR,Ndi\Params\ULPMode,                                 ParamDesc,              0, %UltraLowPowerMode%
+HKR,Ndi\Params\ULPMode,                                 Type,                   0, "enum"
+HKR,Ndi\Params\ULPMode,                                 Default,                0, "1"
+HKR,Ndi\Params\ULPMode\Enum,                            "1",                    0, %Enabled%
+HKR,Ndi\Params\ULPMode\Enum,                            "0",                    0, %Disabled%
+
+; Allow host driver to force exit ULP on ME systems
+HKR,,                                                   ForceHostExitUlp,       0, "1"
+
+[ULPOFF.reg]
+; ULP Mode
+HKR,Ndi\Params\ULPMode,                                 ParamDesc,              0, %UltraLowPowerMode%
+HKR,Ndi\Params\ULPMode,                                 Type,                   0, "enum"
+HKR,Ndi\Params\ULPMode,                                 Default,                0, "0"
+HKR,Ndi\Params\ULPMode\Enum,                            "1",                    0, %Enabled%
+HKR,Ndi\Params\ULPMode\Enum,                            "0",                    0, %Disabled%
+
+[enableK1.reg]
+; EnableK1
+HKR,Ndi\Params\EnableK1,                                ParamDesc,              0, %EnableK1%
+HKR,Ndi\Params\EnableK1,                                Type,                   0, "enum"
+HKR,Ndi\Params\EnableK1,                                Default,                0, "1"
+HKR,Ndi\Params\EnableK1\Enum,                           "1",                    0, %Enabled%
+HKR,Ndi\Params\EnableK1\Enum,                           "0",                    0, %Disabled%
+
+[disableK1.reg]
+; Disable K1 by default for specific devices
+HKR,Ndi\Params\EnableK1,                                ParamDesc,              0, %EnableK1%
+HKR,Ndi\Params\EnableK1,                                Type,                   0, "enum"
+HKR,Ndi\Params\EnableK1,                                Default,                0, "0"
+HKR,Ndi\Params\EnableK1\Enum,                           "1",                    0, %Enabled%
+HKR,Ndi\Params\EnableK1\Enum,                           "0",                    0, %Disabled%
+
+[NDISVlanId.reg]
+; VlanId
+HKR, Ndi\params\VlanId,     ParamDesc,       0, %VlanID%
+HKR, Ndi\params\VlanId,     default,         0, "0"
+HKR, Ndi\params\VlanId,     type,            0, "DWORD"
+HKR, Ndi\params\VlanId,     min,             0, "0"
+HKR, Ndi\params\VlanId,     max,             0, "4094"
+HKR, Ndi\params\VlanId,     step,            0, "1"
+HKR, Ndi\params\VlanId,     base,            0, "10"
+
+[IntelANSVlanID.reg]
+; Intel ANS Vland ID
+HKR,,                                           IntelANSVlanID,          0x00010000, ""
+
+; *PtpHardwareTimestamp
+[PtpHardwareTimestamp.reg]
+HKR, Ndi\Params\*PtpHardwareTimestamp,                  ParamDesc,              0, %PtpHardwareTimestamp%
+HKR, Ndi\Params\*PtpHardwareTimestamp,                  default,                0, "0"
+HKR, Ndi\Params\*PtpHardwareTimestamp\Enum,             "0",                    0, %Disabled%
+HKR, Ndi\Params\*PtpHardwareTimestamp\Enum,             "1",                    0, %Enabled%
+HKR, Ndi\Params\*PtpHardwareTimestamp,                  type,                   0, "enum"
+
+[SoftwareTimestamp.reg]
+HKR, Ndi\params\*SoftwareTimestamp,                     ParamDesc,              0, %SoftwareTimestamp%
+HKR, Ndi\params\*SoftwareTimestamp,                     default,                0, "0"
+HKR, Ndi\params\*SoftwareTimestamp,                     type,                   0, "enum"
+HKR, Ndi\params\*SoftwareTimestamp\enum,                "0",                    0, %Disabled%
+HKR, Ndi\params\*SoftwareTimestamp\enum,                "1",                    0, %SoftwareTimestampRxAll%
+HKR, Ndi\params\*SoftwareTimestamp\enum,                "2",                    0, %SoftwareTimestampTxAll%
+HKR, Ndi\params\*SoftwareTimestamp\enum,                "3",                    0, %SoftwareTimestampRxAllTxAll%
+HKR, Ndi\params\*SoftwareTimestamp\enum,                "4",                    0, %SoftwareTimestampTaggedTx%
+HKR, Ndi\params\*SoftwareTimestamp\enum,                "5",                    0, %SoftwareTimestampRxAllTaggedTx%
+
+[TcpSeg.reg]
+; *LsoV2IPv4 / *LsoV2IPv6
+HKR, Ndi\Params\*LsoV2IPv4,                             ParamDesc,              0, %LsoV2IPv4%
+HKR, Ndi\Params\*LsoV2IPv4,                             default,                0, "1"
+HKR, Ndi\Params\*LsoV2IPv4\Enum,                        "0",                    0, %Disabled%
+HKR, Ndi\Params\*LsoV2IPv4\Enum,                        "1",                    0, %Enabled%
+HKR, Ndi\Params\*LsoV2IPv4,                             type,                   0, "enum"
+HKR, Ndi\Params\*LsoV2IPv6,                             ParamDesc,              0, %LsoV2IPv6%
+HKR, Ndi\Params\*LsoV2IPv6,                             default,                0, "1"
+HKR, Ndi\Params\*LsoV2IPv6\Enum,                        "0",                    0, %Disabled%
+HKR, Ndi\Params\*LsoV2IPv6\Enum,                        "1",                    0, %Enabled%
+HKR, Ndi\Params\*LsoV2IPv6,                             type,                   0, "enum"
+HKR,,                                                   *LsoV1IPv4,             0, "0"
+
+[Copper.reg]
+HKR, Ndi\params\*SpeedDuplex,                           ParamDesc,              0, %SpeedDuplex%
+HKR, Ndi\params\*SpeedDuplex,                           default,                0, "0"
+HKR, Ndi\params\*SpeedDuplex,                           type,                   0, "enum"
+HKR, Ndi\params\*SpeedDuplex\enum,                      "0",                    0, %AutoNegotiation%
+HKR, Ndi\params\*SpeedDuplex\enum,                      "1",                    0, %10Mb_Half_Duplex%
+HKR, Ndi\params\*SpeedDuplex\enum,                      "2",                    0, %10Mb_Full_Duplex%
+HKR, Ndi\params\*SpeedDuplex\enum,                      "3",                    0, %100Mb_Half_Duplex%
+HKR, Ndi\params\*SpeedDuplex\enum,                      "4",                    0, %100Mb_Full_Duplex%
+HKR, PROSetNdi\NdiExt\Params\*SpeedDuplex,              ExposeLevel,            0, "3"
+
+; Adaptive IFS
+HKR, Ndi\Params\AdaptiveIFS,                            ParamDesc,              0, %AdaptiveIFS%
+HKR, Ndi\Params\AdaptiveIFS,                            default,                0, "0"
+HKR, Ndi\Params\AdaptiveIFS,                            type,                   0, "enum"
+HKR, Ndi\Params\AdaptiveIFS\Enum,                       "0",                    0, %Disabled%
+HKR, Ndi\Params\AdaptiveIFS\Enum,                       "1",                    0, %Enabled%
+
+; Legacy Switch Compatibility Mode
+HKR, Ndi\params\LinkNegotiationProcess,                 ParamDesc,              0, %LinkNegotiationProcess%
+HKR, Ndi\params\LinkNegotiationProcess,                 default,                0, "1"
+HKR, Ndi\params\LinkNegotiationProcess,                 type,                   0, "enum"
+HKR, Ndi\params\LinkNegotiationProcess\enum,            "2",                    0, %Enabled%
+HKR, Ndi\params\LinkNegotiationProcess\enum,            "1",                    0, %Disabled%
+HKR, PROSetNdi\NdiExt\Params\LinkNegotiationProcess,    ExposeLevel,            0, "3"
+
+[Copper1000.reg]
+HKR, Ndi\params\*SpeedDuplex\enum,                      "6",                    0, %1000Mb_Full_Duplex%
+
+; Gigabit Master Slave Mode
+HKR,Ndi\Params\MasterSlave,                             ParamDesc,              0, %MasterSlaveMode%
+HKR,Ndi\Params\MasterSlave,                             Type,                   0, "enum"
+HKR,Ndi\Params\MasterSlave,                             Default,                0, "0"
+HKR,Ndi\Params\MasterSlave\Enum,                        "0",                    0, %AutoDetect%
+HKR,Ndi\Params\MasterSlave\Enum,                        "1",                    0, %GigabitMasterMode%
+HKR,Ndi\Params\MasterSlave\Enum,                        "2",                    0, %GigabitSlaveMode%
+
+; Selective advertisement or forced speed
+[Autoneg10100.reg]
+HKR,,                                                   LinkNegotiationProcess,     0, "1"
+
+; EEE
+[EEE.reg]
+HKR, Ndi\Params\EEELinkAdvertisement,                   ParamDesc,              0, %EEELinkAdvertisement%
+HKR, Ndi\Params\EEELinkAdvertisement,                   type,                   0, "enum"
+HKR, Ndi\Params\EEELinkAdvertisement,                   default,                0, "1"
+HKR, Ndi\Params\EEELinkAdvertisement\Enum,              "0",                    0, %Off%
+HKR, Ndi\Params\EEELinkAdvertisement\Enum,              "1",                    0, %On%
+
+;-------------------------------------------------------------------------------
+; Packet specifics
+;
+
+; *JumboPacket
+[JumboPacket.reg]
+HKR, Ndi\Params\*JumboPacket,                           ParamDesc,              0, %JumboPacket%
+HKR, Ndi\Params\*JumboPacket,                           default,                0, "1514"
+HKR, Ndi\Params\*JumboPacket,                           min,                    0, "1514"
+HKR, Ndi\Params\*JumboPacket,                           max,                    0, "9014"
+HKR, Ndi\Params\*JumboPacket,                           step,                   0, "1"
+HKR, Ndi\Params\*JumboPacket,                           base,                   0, "10"
+HKR, Ndi\Params\*JumboPacket,                           type,                   0, "dword"
+
+[Powermgmt.reg]
+HKR, Ndi\Params\*WakeOnPattern,                         ParamDesc,              0, %WakeOnPattern%
+HKR, Ndi\Params\*WakeOnPattern\Enum,                    "0",                    0, %Disabled%
+HKR, Ndi\Params\*WakeOnPattern\Enum,                    "1",                    0, %Enabled%
+HKR, Ndi\Params\*WakeOnPattern,                         type,                   0, "enum"
+HKR, Ndi\Params\*WakeOnPattern,                         default,                0, "1"
+HKR, Ndi\Params\*WakeOnMagicPacket,                     ParamDesc,              0, %WakeOnMagicPacket%
+HKR, Ndi\Params\*WakeOnMagicPacket\Enum,                "0",                    0, %Disabled%
+HKR, Ndi\Params\*WakeOnMagicPacket\Enum,                "1",                    0, %Enabled%
+HKR, Ndi\Params\*WakeOnMagicPacket,                     type,                   0, "enum"
+HKR, Ndi\Params\*WakeOnMagicPacket,                     default,                0, "1"
+HKR, Ndi\Params\WakeOnLink,                             ParamDesc,              0, %WakeOnLinkSettings%
+HKR, Ndi\Params\WakeOnLink\Enum,                        "0",                    0, %Disabled%
+HKR, Ndi\Params\WakeOnLink\Enum,                        "2",                    0, %Forced%
+HKR, Ndi\Params\WakeOnLink,                             type,                   0, "enum"
+HKR, Ndi\Params\WakeOnLink,                             default,                0, "0"
+
+[RTD3.reg]
+HKR,,                                                  *DeviceSleepOnDisconnect,          0, "0"
+
+[SelectiveSuspend.reg]
+HKR, Ndi\Params\*SelectiveSuspend,                      ParamDesc,              0, %SelectiveSuspend%
+HKR, Ndi\Params\*SelectiveSuspend,                      default,                0, "1"
+HKR, Ndi\Params\*SelectiveSuspend\Enum,                 "0",                    0, %Disabled%
+HKR, Ndi\Params\*SelectiveSuspend\Enum,                 "1",                    0, %Enabled%
+HKR, Ndi\Params\*SelectiveSuspend,                      type,                   0, "enum"
+HKR, Ndi\params\*SSIdleTimeout,                         ParamDesc,              0, %SSIdleTimeout%
+HKR, Ndi\params\*SSIdleTimeout,                         default,                0, "20"
+HKR, Ndi\params\*SSIdleTimeout,                         min,                    0, "1"
+HKR, Ndi\params\*SSIdleTimeout,                         max,                    0, "60"
+HKR, Ndi\params\*SSIdleTimeout,                         step,                   0, "1"
+HKR, Ndi\params\*SSIdleTimeout,                         type,                   0, "int"
+
+[ModernStandbyWoLMagicPacket.reg]
+HKR, Ndi\Params\*ModernStandbyWoLMagicPacket,           ParamDesc,              0, %ModernStandbyWoLMagicPacket%
+HKR, Ndi\Params\*ModernStandbyWoLMagicPacket,           default,                0, "1"
+HKR, Ndi\Params\*ModernStandbyWoLMagicPacket\Enum,      "0",                    0, %Disabled%
+HKR, Ndi\Params\*ModernStandbyWoLMagicPacket\Enum,      "1",                    0, %Enabled%
+HKR, Ndi\Params\*ModernStandbyWoLMagicPacket,           type,                   0, "enum"
+
+[AcDcLink.reg]
+HKR, Ndi\Params\AutoPowerSaveModeEnabled,               ParamDesc,              0, %AcDcLinkStep%
+HKR, Ndi\Params\AutoPowerSaveModeEnabled,               type,                   0, "enum"
+HKR, Ndi\Params\AutoPowerSaveModeEnabled,               default,                0, "1"
+HKR, Ndi\Params\AutoPowerSaveModeEnabled\Enum,          "0",                    0, %Disabled%
+HKR, Ndi\Params\AutoPowerSaveModeEnabled\Enum,          "1",                    0, %Enabled%
+
+; Sips
+[Sips.reg]
+HKR, Ndi\Params\SipsEnabled,                            ParamDesc,              0, %SipsEnabled%
+HKR, Ndi\Params\SipsEnabled,                            type,                   0, "enum"
+HKR, Ndi\Params\SipsEnabled,                            default,                0, "0"
+HKR, Ndi\Params\SipsEnabled\Enum,                       "0",                    0, %Disabled%
+HKR, Ndi\Params\SipsEnabled\Enum,                       "1",                    0, %Enabled%
+
+; Protocol Offload
+[Po.reg]
+HKR, Ndi\Params\*PMARPOffload,                          ParamDesc,              0, %PMARPOffload%
+HKR, Ndi\Params\*PMARPOffload,                          type,                   0, "enum"
+HKR, Ndi\Params\*PMARPOffload,                          default,                0, "1"
+HKR, Ndi\Params\*PMARPOffload\Enum,                     "0",                    0, %Disabled%
+HKR, Ndi\Params\*PMARPOffload\Enum,                     "1",                    0, %Enabled%
+HKR, Ndi\Params\*PMNSOffload,                           ParamDesc,              0, %PMNSOffload%
+HKR, Ndi\Params\*PMNSOffload,                           type,                   0, "enum"
+HKR, Ndi\Params\*PMNSOffload,                           default,                0, "1"
+HKR, Ndi\Params\*PMNSOffload\Enum,                      "0",                    0, %Disabled%
+HKR, Ndi\Params\*PMNSOffload\Enum,                      "1",                    0, %Enabled%
+
+;-------------------------------------------------------------------------------
+[WakeOnSlot.reg]
+HKR,,                                                   WakeOnSlot,             0, 0
+
+[SVOFFMode.reg]
+HKR,,                                                   SVOFFMode,              0,  "1"
+
+[MSI.reg]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties", MSISupported, 0x00010001, 1
+HKR, "Interrupt Management\MessageSignaledInterruptProperties", MessageNumberLimit, 0x00010001, 1
+
+;-------------------------------------------------------------------------------
+; Uninstallation
+[UninstallW2.reg]
+HKR, Prounstl\SupportedDevices\8086, 153A, 0, "153A"
+HKR, Prounstl\SupportedDevices\8086, 153B, 0, "153B"
+HKR, Prounstl\SupportedDevices\8086, 155A, 0, "155A"
+HKR, Prounstl\SupportedDevices\8086, 1559, 0, "1559"
+HKR, Prounstl\SupportedDevices\8086, 15A0, 0, "15A0"
+HKR, Prounstl\SupportedDevices\8086, 15A1, 0, "15A1"
+HKR, Prounstl\SupportedDevices\8086, 15A2, 0, "15A2"
+HKR, Prounstl\SupportedDevices\8086, 15A3, 0, "15A3"
+HKR, Prounstl\SupportedDevices\8086, 156F, 0, "156F"
+HKR, Prounstl\SupportedDevices\8086, 1570, 0, "1570"
+HKR, Prounstl\SupportedDevices\8086, 15B7, 0, "15B7"
+HKR, Prounstl\SupportedDevices\8086, 15B8, 0, "15B8"
+HKR, Prounstl\SupportedDevices\8086, 15B9, 0, "15B9"
+HKR, Prounstl\SupportedDevices\8086, 15D7, 0, "15D7"
+HKR, Prounstl\SupportedDevices\8086, 15D8, 0, "15D8"
+HKR, Prounstl\SupportedDevices\8086, 15E3, 0, "15E3"
+HKR, Prounstl\SupportedDevices\8086, 15D6, 0, "15D6"
+HKR, Prounstl\SupportedDevices\8086, 15BB, 0, "15BB"
+HKR, Prounstl\SupportedDevices\8086, 15BC, 0, "15BC"
+HKR, Prounstl\SupportedDevices\8086, 15BD, 0, "15BD"
+HKR, Prounstl\SupportedDevices\8086, 15BE, 0, "15BE"
+HKR, Prounstl\SupportedDevices\8086, 15DF, 0, "15DF"
+HKR, Prounstl\SupportedDevices\8086, 15E0, 0, "15E0"
+HKR, Prounstl\SupportedDevices\8086, 15E1, 0, "15E1"
+HKR, Prounstl\SupportedDevices\8086, 15E2, 0, "15E2"
+HKR, Prounstl\SupportedDevices\8086, 0D4E, 0, "0D4E"
+HKR, Prounstl\SupportedDevices\8086, 0D4F, 0, "0D4F"
+HKR, Prounstl\SupportedDevices\8086, 0D4C, 0, "0D4C"
+HKR, Prounstl\SupportedDevices\8086, 0D4D, 0, "0D4D"
+HKR, Prounstl\SupportedDevices\8086, 0D53, 0, "0D53"
+HKR, Prounstl\SupportedDevices\8086, 0D55, 0, "0D55"
+HKR, Prounstl\SupportedDevices\8086, 15F9, 0, "15F9"
+HKR, Prounstl\SupportedDevices\8086, 15FA, 0, "15FA"
+HKR, Prounstl\SupportedDevices\8086, 15FB, 0, "15FB"
+HKR, Prounstl\SupportedDevices\8086, 15FC, 0, "15FC"
+HKR, Prounstl\SupportedDevices\8086, 15F4, 0, "15F4"
+HKR, Prounstl\SupportedDevices\8086, 1A1E, 0, "1A1E"
+HKR, Prounstl\SupportedDevices\8086, 1A1F, 0, "1A1F"
+HKR, Prounstl\SupportedDevices\8086, 1A1C, 0, "1A1C"
+HKR, Prounstl\SupportedDevices\8086, 1A1D, 0, "1A1D"
+HKR, Prounstl\SupportedDevices\8086, 0DC5, 0, "0DC5"
+HKR, Prounstl\SupportedDevices\8086, 0DC6, 0, "0DC6"
+HKR, Prounstl\SupportedDevices\8086, 0DC7, 0, "0DC7"
+HKR, Prounstl\SupportedDevices\8086, 0DC8, 0, "0DC8"
+HKR, Prounstl\SupportedDevices\8086, 550A, 0, "550A"
+HKR, Prounstl\SupportedDevices\8086, 550B, 0, "550B"
+HKR, Prounstl\SupportedDevices\8086, 550C, 0, "550C"
+HKR, Prounstl\SupportedDevices\8086, 550D, 0, "550D"
+HKR, Prounstl\SupportedDevices\8086, 57A0, 0, "57A0"
+HKR, Prounstl\SupportedDevices\8086, 57A1, 0, "57A1"
+HKR, Prounstl\SupportedDevices\8086, 550E, 0, "550E"
+HKR, Prounstl\SupportedDevices\8086, 550F, 0, "550F"
+HKR, Prounstl\SupportedDevices\8086, 57B3, 0, "57B3"
+HKR, Prounstl\SupportedDevices\8086, 57B4, 0, "57B4"
+HKR, Prounstl\SupportedDevices\8086, 57B5, 0, "57B5"
+HKR, Prounstl\SupportedDevices\8086, 57B6, 0, "57B6"
+HKR, Prounstl\SupportedDevices\8086, 57B7, 0, "57B7"
+HKR, Prounstl\SupportedDevices\8086, 57B8, 0, "57B8"
+HKR, Prounstl\Services, e1dexpress, 0, "e1d.sys"
+
+;-------------------------------------------------------------------------------
+; WinVista copy files
+;
+
+[winblue.CopyFiles]
+e1d.sys,,,2
+
+[winblue.Service]
+DisplayName     = %e1dExpress.Service.DispName%
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_DEMAND_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %13%\e1d.sys
+LoadOrderGroup  = NDIS
+AddReg             = Service_AddReg
+AddReg             = DmaRemapping.reg
+
+[Service_AddReg]
+HKR, Parameters, BootFlags, 0x00010001, 0x1
+
+[DMARemapping.reg]
+HKR, Parameters, DmaRemappingCompatible, 0x00010001, 2
+
+;-------------------------------------------------------------------------------
+; Common base for all drivers for Eventlog and TextModeFlags
+;
+
+[winblue.EventLog]
+AddReg             = winblue.AddEventLog.reg
+
+[winblue.AddEventLog.reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll;%13%\e1dmsg.dll"
+HKR, , TypesSupported,   0x00010001, 7
+
+[MessageDll.CopyFiles]
+e1dmsg.dll
+
+[CoInKS.reg]
+HKR,,                                          CoInstallFlag,      0x00010001, 0x08203101
+
+;-------------------------------------------------------------------------------
+; DestinationDirs
+;
+[DestinationDirs]
+DefaultDestDir                = 13
+winblue.CopyFiles          = 13
+MessageDll.CopyFiles          = 13
+
+[SourceDisksNames]
+;
+; diskid = description[, [tagfile] [, <unused>,subdir]]
+;
+1 = %DISKNAME%,,,
+
+[SourceDisksFiles]
+;
+; filename_on_source = diskID[, [subdir][, size]]
+;
+e1dmsg.dll   = 1,,
+e1d.sys = 1,, ; on distribution disk 1
+
+;-------------------------------------------------------------------------------
+; Legacy
+[Advanced.DelReg]
+HKR, Ndi\Params
+HKR, PROSetNdi\Params
+HKR, PROSetNdi\NdiExt
+
+;-----------------------------------------------------------------------------
+; Localizable Strings
+
+[Strings]
+AutoDetect                      = "Auto Detect"
+AutoNegotiation                 = "Auto Negotiation"
+SpeedDuplex                     = "Speed & Duplex"
+10Mb_Half_Duplex                = "10 Mbps Half Duplex"
+10Mb_Full_Duplex                = "10 Mbps Full Duplex"
+100Mb_Half_Duplex               = "100 Mbps Half Duplex"
+100Mb_Full_Duplex               = "100 Mbps Full Duplex"
+1000Mb_Full_Duplex              = "1.0 Gbps Full Duplex"
+LinkNegotiationProcess          = "Legacy Switch Compatibility Mode"
+IPChksumOffv4                   = "IPv4 Checksum Offload"
+TCPChksumOffv4                  = "TCP Checksum Offload (IPv4)"
+UDPChksumOffv4                  = "UDP Checksum Offload (IPv4)"
+TCPChksumOffv6                  = "TCP Checksum Offload (IPv6)"
+UDPChksumOffv6                  = "UDP Checksum Offload (IPv6)"
+SipsEnabled                     = "System Idle Power Saver"
+PMARPOffload                    = "Protocol ARP Offload"
+PMNSOffload                     = "Protocol NS Offload"
+LsoV2IPv4                       = "Large Send Offload V2 (IPv4)"
+LsoV2IPv6                       = "Large Send Offload V2 (IPv6)"
+ChksumOffTxRx                   = "Rx & Tx Enabled"
+ChksumOffTx                     = "Tx Enabled"
+ChksumOffRx                     = "Rx Enabled"
+FlowControl                     = "Flow Control"
+FlowControl_TxOnly              = "Tx Enabled"
+FlowControl_RxOnly              = "Rx Enabled"
+FlowControl_Full                = "Rx & Tx Enabled"
+PriorityVlanDisabled2           = "Packet Priority & VLAN Disabled"
+PriorityEnabled2                = "Packet Priority Enabled"
+VlanEnabled                     = "VLAN Enabled"
+PriorityVlanEnabled2            = "Packet Priority & VLAN Enabled"
+TransmitBuffers                 = "Transmit Buffers"
+ReceiveBuffers                  = "Receive Buffers"
+PriorityVLANTag2                = "Packet Priority & VLAN"
+On                              = "On"
+Off                             = "Off"
+Enabled                         = "Enabled"
+Disabled                        = "Disabled"
+LAA                             = "Locally Administered Address"
+JumboPacket                     = "Jumbo Packet"
+AdaptiveIFS                     = "Adaptive Inter-Frame Spacing"
+AcDcLinkStep                    = "Link Speed Battery Saver"
+WakeOnMagicPacket               = "Wake on Magic Packet"
+Enable_PME                      = "Enable PME"
+Forced                          = "Forced"
+WakeOnLinkSettings              = "Wake on Link Settings"
+WakeOnPattern                   = "Wake on Pattern Match"
+LogLinkState                    = "Log Link State Event"
+InterruptModeration             = "Interrupt Moderation"
+InterruptThrottleRate           = "Interrupt Moderation Rate"
+Adaptive                        = "Adaptive"
+Extreme                         = "Extreme"
+Minimal                         = "Minimal"
+High                            = "High"
+Medium                          = "Medium"
+Low                             = "Low"
+GigabitMasterMode               = "Force Master Mode"
+GigabitSlaveMode                = "Force Slave Mode"
+MasterSlaveMode                 = "Gigabit Master Slave Mode"
+WaitAutoNegComplete             = "Wait for Link"
+EEELinkAdvertisement            = "Energy Efficient Ethernet"
+ReduceSpeedOnPowerDown          = "Reduce Speed On Power Down"
+VlanID                          = "VLAN ID"
+SelectiveSuspend                = "Selective Suspend"
+SSIdleTimeout                   = "Selective Suspend Idle Timeout"
+ModernStandbyWoLMagicPacket     = "Wake from S0ix on Magic Packet"
+UltraLowPowerMode               = "Ultra Low Power Mode"
+EnableK1                        = "PCI Express Link Power Saving"
+PtpHardwareTimestamp            = "PTP Hardware Timestamp"
+SoftwareTimestamp               = "Software Timestamp"
+SoftwareTimestampRxAll          = "RxAll"
+SoftwareTimestampTxAll          = "TxAll"
+SoftwareTimestampRxAllTxAll     = "RxAll & TxAll"
+SoftwareTimestampTaggedTx       = "TaggedTx"
+SoftwareTimestampRxAllTaggedTx  = "RxAll & TaggedTx"
+Intel                           = "Intel"
+e1dExpress.Service.DispName     = "Intel(R) PRO/1000 PCI Express Network Connection Driver D"
+DISKNAME                        = "Intel(R) PRO/1000 Driver Disk"
+
+;; Brandnames.str
+;------------------------------------------------------------------------------
+E153ANC.DeviceDesc              = "Intel(R) Ethernet Connection I217-LM"
+E153BNC.DeviceDesc              = "Intel(R) Ethernet Connection I217-V"
+E155ANC.DeviceDesc              = "Intel(R) Ethernet Connection I218-LM"
+E1559NC.DeviceDesc              = "Intel(R) Ethernet Connection I218-V"
+E15A0NC.DeviceDesc              = "Intel(R) Ethernet Connection (2) I218-LM"
+E15A1NC.DeviceDesc              = "Intel(R) Ethernet Connection (2) I218-V"
+E15A2NC.DeviceDesc              = "Intel(R) Ethernet Connection (3) I218-LM"
+E15A3NC.DeviceDesc              = "Intel(R) Ethernet Connection (3) I218-V"
+E156FNC.DeviceDesc              = "Intel(R) Ethernet Connection I219-LM"
+E1570NC.DeviceDesc              = "Intel(R) Ethernet Connection I219-V"
+E15B7NC.DeviceDesc              = "Intel(R) Ethernet Connection (2) I219-LM"
+E15B8NC.DeviceDesc              = "Intel(R) Ethernet Connection (2) I219-V"
+E15B9NC.DeviceDesc              = "Intel(R) Ethernet Connection (3) I219-LM"
+E15D7NC.DeviceDesc              = "Intel(R) Ethernet Connection (4) I219-LM"
+E15D8NC.DeviceDesc              = "Intel(R) Ethernet Connection (4) I219-V"
+E15E3NC.DeviceDesc              = "Intel(R) Ethernet Connection (5) I219-LM"
+E15D6NC.DeviceDesc              = "Intel(R) Ethernet Connection (5) I219-V"
+E15BDNC.DeviceDesc              = "Intel(R) Ethernet Connection (6) I219-LM"
+E15BENC.DeviceDesc              = "Intel(R) Ethernet Connection (6) I219-V"
+E15BBNC.DeviceDesc              = "Intel(R) Ethernet Connection (7) I219-LM"
+E15BCNC.DeviceDesc              = "Intel(R) Ethernet Connection (7) I219-V"
+E15DFNC.DeviceDesc              = "Intel(R) Ethernet Connection (8) I219-LM"
+E15E0NC.DeviceDesc              = "Intel(R) Ethernet Connection (8) I219-V"
+E15E1NC.DeviceDesc              = "Intel(R) Ethernet Connection (9) I219-LM"
+E15E2NC.DeviceDesc              = "Intel(R) Ethernet Connection (9) I219-V"
+E0D4ENC.DeviceDesc              = "Intel(R) Ethernet Connection (10) I219-LM"
+E0D4FNC.DeviceDesc              = "Intel(R) Ethernet Connection (10) I219-V"
+E0D4CNC.DeviceDesc              = "Intel(R) Ethernet Connection (11) I219-LM"
+E0D4DNC.DeviceDesc              = "Intel(R) Ethernet Connection (11) I219-V"
+E0D53NC.DeviceDesc              = "Intel(R) Ethernet Connection (12) I219-LM"
+E0D55NC.DeviceDesc              = "Intel(R) Ethernet Connection (12) I219-V"
+E15FBNC.DeviceDesc              = "Intel(R) Ethernet Connection (13) I219-LM"
+E15FCNC.DeviceDesc              = "Intel(R) Ethernet Connection (13) I219-V"
+E15F9NC.DeviceDesc              = "Intel(R) Ethernet Connection (14) I219-LM"
+E15FANC.DeviceDesc              = "Intel(R) Ethernet Connection (14) I219-V"
+E15F4NC.DeviceDesc              = "Intel(R) Ethernet Connection (15) I219-LM"
+E1A1ENC.DeviceDesc              = "Intel(R) Ethernet Connection (16) I219-LM"
+E1A1FNC.DeviceDesc              = "Intel(R) Ethernet Connection (16) I219-V"
+E1A1CNC.DeviceDesc              = "Intel(R) Ethernet Connection (17) I219-LM"
+E1A1DNC.DeviceDesc              = "Intel(R) Ethernet Connection (17) I219-V"
+E0DC7NC.DeviceDesc              = "Intel(R) Ethernet Connection (22) I219-LM"
+E0DC8NC.DeviceDesc              = "Intel(R) Ethernet Connection (22) I219-V"
+E0DC5NC.DeviceDesc              = "Intel(R) Ethernet Connection (23) I219-LM"
+E0DC6NC.DeviceDesc              = "Intel(R) Ethernet Connection (23) I219-V"
+E550ANC.DeviceDesc              = "Intel(R) Ethernet Connection (18) I219-LM"
+E550BNC.DeviceDesc              = "Intel(R) Ethernet Connection (18) I219-V"
+E550CNC.DeviceDesc              = "Intel(R) Ethernet Connection (19) I219-LM"
+E550DNC.DeviceDesc              = "Intel(R) Ethernet Connection (19) I219-V"
+E57A0NC.DeviceDesc              = "Intel(R) Ethernet Connection (24) I219-LM"
+E57A1NC.DeviceDesc              = "Intel(R) Ethernet Connection (24) I219-V"
+E550ENC.DeviceDesc              = "Intel(R) Ethernet Connection (20) I219-LM"
+E550FNC.DeviceDesc              = "Intel(R) Ethernet Connection (20) I219-V"
+E57B3NC.DeviceDesc              = "Intel(R) Ethernet Connection (25) I219-LM"
+E57B4NC.DeviceDesc              = "Intel(R) Ethernet Connection (25) I219-V"
+E57B5NC.DeviceDesc              = "Intel(R) Ethernet Connection (26) I219-LM"
+E57B6NC.DeviceDesc              = "Intel(R) Ethernet Connection (26) I219-V"
+E57B7NC.DeviceDesc              = "Intel(R) Ethernet Connection (27) I219-LM"
+E57B8NC.DeviceDesc              = "Intel(R) Ethernet Connection (27) I219-V"
+
+;---------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------
+

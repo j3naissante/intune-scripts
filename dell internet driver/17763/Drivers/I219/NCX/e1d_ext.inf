@@ -1,0 +1,84 @@
+;******************************************************************************
+;**                                                                          **
+;**  Copyright 2007-2025 Intel Corporation All Rights Reserved.              **
+;**                                                                          **
+;**  The material contained or described herein and all documents related    **
+;**  to such material ("Material") is owned by Intel Corporation or its      **
+;**  suppliers or licensors, and title to such Material remains with Intel   **
+;**  Corporation or its suppliers or licensors. The Material contains        **
+;**  proprietary information of Intel or its suppliers and licensors. The    **
+;**  Material is protected by worldwide copyright laws and treaty            **
+;**  provisions. No part of the Material may be used, copied, reproduced,    **
+;**  modified, published, uploaded, posted, transmitted, distributed or      **
+;**  disclosed in any way without Intel's prior express written permission.  **
+;**  No license under any patent, copyright or other intellectual property   **
+;**  rights in the Material is granted to or conferred upon you, either      **
+;**  expressly, by implication, inducement, estoppel or otherwise. Any       **
+;**  license under such intellectual property rights must be express and     **
+;**  approved by Intel in writing.                                           **
+;**                                                                          **
+;**  Unless otherwise agreed by Intel in writing, you may not remove or      **
+;**  alter this notice or any other notice embedded in Materials by Intel    **
+;**  or Intel’s suppliers or licensors in any way.                           **
+;******************************************************************************
+;
+;*******************************************************************************
+; Extension INF for Intel(R) PCIe Network Adapters
+;*******************************************************************************
+;
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = Extension
+ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+Provider    = %Provider%
+ExtensionId = {EFFB1195-DAD6-47D0-BDEE-D61A4BE72407} ; This is an Intel GUID; please replace with your own GUID
+DriverVer   = 01/29/2026,1.0.0.5
+CatalogFile = e1d_ext.cat
+
+[Manufacturer]
+; %Provider% = OEM, NTx86.10.0, NTamd64.10.0
+%Provider% = OEM, NTamd64.10.0...22000
+%Provider% = OEM, NTx86.10.0...22000
+
+[OEM.NTamd64.10.0...22000]
+; HWID Models directives for x64 go here, e.g.:
+;%Provider.ExtensionDesc% = HWIDInstall.10.0, PCI\VEN_8086&DEV_XXXX&SUBSYS_XXXXXXXX
+%Provider.ExtensionDesc% = HWIDInstall.10.0, PCI\VEN_8086&DEV_57A0,
+%Provider.ExtensionDesc% = HWIDInstall2.10.0, PCI\VEN_8086&DEV_550A,
+%Provider.ExtensionDesc% = HWIDInstall2.10.0, PCI\VEN_8086&DEV_550C,
+%Provider.ExtensionDesc% = HWIDInstall2.10.0, PCI\VEN_8086&DEV_550E,
+
+[OEM.NTx86.10.0...22000]
+; HWID Models directives for x64 go here, e.g.:
+;%Provider.ExtensionDesc% = HWIDInstall.10.0, PCI\VEN_8086&DEV_XXXX&SUBSYS_XXXXXXXX
+%Provider.ExtensionDesc% = HWIDInstall.10.0, PCI\VEN_8086&DEV_57A0,
+%Provider.ExtensionDesc% = HWIDInstall2.10.0, PCI\VEN_8086&DEV_550A,
+%Provider.ExtensionDesc% = HWIDInstall2.10.0, PCI\VEN_8086&DEV_550C,
+%Provider.ExtensionDesc% = HWIDInstall2.10.0, PCI\VEN_8086&DEV_550E,
+
+[HWIDInstall.10.0]
+; DDInstall directives go here, e.g.:
+AddReg = Customizations.AddReg
+AddReg = Plllocktimeout.AddReg
+
+[HWIDInstall2.10.0]
+; DDInstall directives go here, e.g.:
+AddReg = Plllocktimeout.AddReg
+
+[HWIDInstall.10.0.HW]
+; Include directives go here, e.g.:
+Include            = pci.inf
+Needs              = PciIoSpaceNotRequired.HW
+;AddReg             = MSI.reg
+
+[Customizations.AddReg]
+; The default values are specified here. Change default values to customize behavior.
+HKR,, EnableK1, 0, "1"
+
+[Plllocktimeout.AddReg]
+; The default values are specified here. Change default values to customize behavior.
+HKR,, "Plllocktimeout", 0x00010001, 0x1d5
+
+[Strings]
+Provider               = "OEM" ; Replace with your provider name
+Provider.ExtensionDesc = "OEM Extensions for Intel(R) Ethernet Controller"
